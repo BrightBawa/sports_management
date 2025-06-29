@@ -1,0 +1,16 @@
+frappe
+lms
+insights
+healthcare
+erpnext_gst_compliance
+gcihs_app
+print_designer
+erpnext
+waba_integration
+pdf_on_submit
+builder
+payments
+education
+library_management
+gcih_respository
+hrms

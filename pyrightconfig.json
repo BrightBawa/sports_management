@@ -1,0 +1,14 @@
+{
+    "include": [
+        "apps"
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/__pycache__"
+    ],
+    "ignore": [
+        "**/frappe/**"
+    ],
+    "reportMissingImports": false,
+    "reportMissingTypeStubs": false
+}

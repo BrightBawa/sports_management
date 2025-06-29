@@ -1,0 +1,132 @@
+2025-03-18 08:52:54,548 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 100, in application
+    init_request(request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 196, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 117, in __init__
+    self.make_session(resume=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 211, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 230, in __init__
+    self.resume()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 313, in resume
+    self.validate_user()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 238, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1231, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1170, in get_cached_doc
+    if (key := can_cache_doc(args)) and (doc := cache.get_value(key)):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 97, in get_value
+    val = pickle.loads(val)
+ModuleNotFoundError: No module named 'lms.overrides.user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 20, in get_response
+    return renderer_instance.render()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/utils.py", line 171, in get_boot_data
+    apps = get_apps() or []
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/desk/desktop.py", line 423, in get_workspace_sidebar_items
+    blocked_modules = frappe.get_cached_doc("User", frappe.session.user).get_blocked_modules()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1170, in get_cached_doc
+    if (key := can_cache_doc(args)) and (doc := cache.get_value(key)):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 97, in get_value
+    val = pickle.loads(val)
+ModuleNotFoundError: No module named 'lms.overrides.user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 133, in application
+    response = handle_exception(e)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 397, in handle_exception
+    response = get_response("message", http_status_code=http_status_code)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 23, in get_response
+    return handle_exception(e, endpoint, path, http_status_code)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/permissions.py", line 870, in wrapper
+    return fn(e, *args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 37, in handle_exception
+    return ErrorPage(exception=e).render()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/utils.py", line 534, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 263, in get_website_settings
+    context.boot = get_boot_data()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/utils.py", line 171, in get_boot_data
+    apps = get_apps() or []
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/apps.py", line 15, in get_apps
+    allowed_workspaces = get_workspace_sidebar_items().get("pages")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/typing_validations.py", line 31, in wrapper
+    return func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/desk/desktop.py", line 423, in get_workspace_sidebar_items
+    blocked_modules = frappe.get_cached_doc("User", frappe.session.user).get_blocked_modules()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1170, in get_cached_doc
+    if (key := can_cache_doc(args)) and (doc := cache.get_value(key)):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/redis_wrapper.py", line 97, in get_value
+    val = pickle.loads(val)
+ModuleNotFoundError: No module named 'lms.overrides.user'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 147, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 163, in run_after_request_hooks
+    frappe.call(after_request_task, response=response, request=request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1725, in call
+    fn = get_attr(fn)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1719, in get_attr
+    return getattr(get_module(modulename), methodname)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1437, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/print_designer/print_designer/pdf_generator/pdf.py", line 5, in <module>
+    from print_designer.pdf_generator.browser import Browser
+  File "/home/frapadmin/gcihs-bench/apps/print_designer/print_designer/pdf_generator/browser.py", line 9, in <module>
+    from print_designer.pdf_generator.cdp_connection import CDPSocketClient
+  File "/home/frapadmin/gcihs-bench/apps/print_designer/print_designer/pdf_generator/cdp_connection.py", line 4, in <module>
+    import websockets
+ModuleNotFoundError: No module named 'websockets'
