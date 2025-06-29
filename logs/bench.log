@@ -3198,3 +3198,4 @@ To avoid seeing this warning, set shallow_clone to false in your common_site_con
 2025-06-29 08:41:19,314 INFO /usr/local/bin/bench worker --queue long,default,short
 2025-06-29 08:41:19,324 INFO /usr/local/bin/bench worker --queue short,default
 2025-06-29 08:41:20,511 INFO A newer version of bench is available: 5.25.1 → 5.25.7
+2025-06-29 08:51:06,721 INFO /home/frapadmin/gcihs-bench/env/bin/bench doctor

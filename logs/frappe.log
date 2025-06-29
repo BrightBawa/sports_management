@@ -118,3 +118,6 @@ Form Dict: {'doc': '{"docstatus":0,"doctype":"Memo","name":"new-memo-hetphtcyuu"
 2025-06-29 08:39:40,519 ERROR frappe New Exception collected in error log
 Site: erp.gcihs.local
 Form Dict: {'doc': '{"docstatus":0,"doctype":"Memo","name":"new-memo-ofirohgwfw","__islocal":1,"__unsaved":1,"owner":"brightbawa@gcihs.edu.gh","date":"2025-06-29","workflow_state":"Draft","from":"Bright BAWA (IT Manager)","to":"0332","subject":"test","content":"<div class=\\"ql-editor read-mode\\"><p>ghcghc</p></div>"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-06-29 08:47:16,698 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Memo","name":"new-memo-azubelpfoy","__islocal":1,"__unsaved":1,"owner":"brightbawa@gcihs.edu.gh","date":"2025-06-29","workflow_state":"Draft","from":"Bright BAWA (IT Manager)","to":"0332","subject":"ada"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
