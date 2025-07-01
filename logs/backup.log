@@ -4714,3 +4714,51 @@ Backup Summary for erp.gcihs.local at 2025-06-29 06:00:08.208953
 Config  : ./erp.gcihs.local/private/backups/20250629_060002-erp_gcihs_local-site_config_backup.json 429.0B
 Database: ./erp.gcihs.local/private/backups/20250629_060002-erp_gcihs_local-database.sql.gz         4.5MiB
 Backup for Site erp.gcihs.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=gci_db --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false gci_db | /usr/bin/gzip >> ./erp.gcihs.local/private/backups/20250629_120002-erp_gcihs_local-database.sql.gz
+
+Backup Summary for erp.gcihs.local at 2025-06-29 12:00:08.199326
+Config  : ./erp.gcihs.local/private/backups/20250629_120002-erp_gcihs_local-site_config_backup.json 429.0B
+Database: ./erp.gcihs.local/private/backups/20250629_120002-erp_gcihs_local-database.sql.gz         4.6MiB
+Backup for Site erp.gcihs.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=gci_db --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false gci_db | /usr/bin/gzip >> ./erp.gcihs.local/private/backups/20250629_180002-erp_gcihs_local-database.sql.gz
+
+Backup Summary for erp.gcihs.local at 2025-06-29 18:00:08.425340
+Config  : ./erp.gcihs.local/private/backups/20250629_180002-erp_gcihs_local-site_config_backup.json 429.0B
+Database: ./erp.gcihs.local/private/backups/20250629_180002-erp_gcihs_local-database.sql.gz         4.7MiB
+Backup for Site erp.gcihs.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=gci_db --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false gci_db | /usr/bin/gzip >> ./erp.gcihs.local/private/backups/20250630_000002-erp_gcihs_local-database.sql.gz
+
+Backup Summary for erp.gcihs.local at 2025-06-30 00:00:08.514225
+Config  : ./erp.gcihs.local/private/backups/20250630_000002-erp_gcihs_local-site_config_backup.json 429.0B
+Database: ./erp.gcihs.local/private/backups/20250630_000002-erp_gcihs_local-database.sql.gz         4.7MiB
+Backup for Site erp.gcihs.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=gci_db --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false gci_db | /usr/bin/gzip >> ./erp.gcihs.local/private/backups/20250630_060002-erp_gcihs_local-database.sql.gz
+
+Backup Summary for erp.gcihs.local at 2025-06-30 06:00:08.032204
+Config  : ./erp.gcihs.local/private/backups/20250630_060002-erp_gcihs_local-site_config_backup.json 429.0B
+Database: ./erp.gcihs.local/private/backups/20250630_060002-erp_gcihs_local-database.sql.gz         4.6MiB
+Backup for Site erp.gcihs.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=gci_db --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false gci_db | /usr/bin/gzip >> ./erp.gcihs.local/private/backups/20250630_120002-erp_gcihs_local-database.sql.gz
+
+Backup Summary for erp.gcihs.local at 2025-06-30 12:00:09.667577
+Config  : ./erp.gcihs.local/private/backups/20250630_120002-erp_gcihs_local-site_config_backup.json 429.0B
+Database: ./erp.gcihs.local/private/backups/20250630_120002-erp_gcihs_local-database.sql.gz         4.7MiB
+Backup for Site erp.gcihs.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=gci_db --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false gci_db | /usr/bin/gzip >> ./erp.gcihs.local/private/backups/20250630_180002-erp_gcihs_local-database.sql.gz
+
+Backup Summary for erp.gcihs.local at 2025-06-30 18:00:08.276885
+Config  : ./erp.gcihs.local/private/backups/20250630_180002-erp_gcihs_local-site_config_backup.json 429.0B
+Database: ./erp.gcihs.local/private/backups/20250630_180002-erp_gcihs_local-database.sql.gz         4.7MiB
+Backup for Site erp.gcihs.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=gci_db --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false gci_db | /usr/bin/gzip >> ./erp.gcihs.local/private/backups/20250701_000002-erp_gcihs_local-database.sql.gz
+
+Backup Summary for erp.gcihs.local at 2025-07-01 00:00:08.271786
+Config  : ./erp.gcihs.local/private/backups/20250701_000002-erp_gcihs_local-site_config_backup.json 429.0B
+Database: ./erp.gcihs.local/private/backups/20250701_000002-erp_gcihs_local-database.sql.gz         4.7MiB
+Backup for Site erp.gcihs.local has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=gci_db --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false gci_db | /usr/bin/gzip >> ./erp.gcihs.local/private/backups/20250701_060002-erp_gcihs_local-database.sql.gz
+
+Backup Summary for erp.gcihs.local at 2025-07-01 06:00:08.037269
+Config  : ./erp.gcihs.local/private/backups/20250701_060002-erp_gcihs_local-site_config_backup.json 429.0B
+Database: ./erp.gcihs.local/private/backups/20250701_060002-erp_gcihs_local-database.sql.gz         4.7MiB
+Backup for Site erp.gcihs.local has been successfully completed

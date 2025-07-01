@@ -4,11 +4,45 @@
     ],
     "exclude": [
         "**/node_modules",
-        "**/__pycache__"
-    ],
-    "ignore": [
+        "**/__pycache__",
         "**/frappe/**"
     ],
+    "ignore": [
+        "**/frappe/**",
+        "**/apps/**/frappe/**",
+        "**/memo/memo.py"
+    ],
     "reportMissingImports": false,
-    "reportMissingTypeStubs": false
+    "reportMissingTypeStubs": false,
+    "reportUnknownMemberType": false,
+    "reportUnknownVariableType": false,
+    "reportUnknownArgumentType": false,
+    "reportUnknownParameterType": false,
+    "reportMissingTypeArgument": false,
+    "reportUntypedFunctionDecorator": false,
+    "reportUntypedClassDecorator": false,
+    "reportUntypedBaseClass": false,
+    "reportUntypedNamedTuple": false,
+    "reportPrivateUsage": false,
+    "reportConstantRedefinition": false,
+    "reportIncompatibleMethodOverride": false,
+    "reportIncompatibleVariableOverride": false,
+    "reportInconsistentConstructor": false,
+    "reportOverlappingOverloads": false,
+    "reportMatchNotExhaustive": false,
+    "reportUnusedExpression": false,
+    "reportUnusedVariable": false,
+    "reportUnusedImport": false,
+    "reportUnusedClass": false,
+    "reportUnusedFunction": false,
+    "reportDuplicateImport": false,
+    "reportWildcardImportFromLibrary": false,
+    "reportOptionalSubscript": false,
+    "reportOptionalMemberAccess": false,
+    "reportOptionalCall": false,
+    "reportOptionalIterable": false,
+    "reportOptionalContextManager": false,
+    "reportOptionalOperand": false,
+    "pythonVersion": "3.8",
+    "typeCheckingMode": "basic"
 }

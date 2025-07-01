@@ -634,3 +634,98 @@ alter table `tabDocType` add column if not exists migration_hash varchar(140)
 ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
 2025-06-28 11:54:54,710 WARNING database DDL Query made to DB:
 ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-06-30 04:53:36,291 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` ADD COLUMN `from_` varchar(140)
+2025-06-30 11:20:41,375 WARNING database DDL Query made to DB:
+create table `tabMemo recipient` (
+			name varchar(140) primary key,
+			creation datetime(6),
+			modified datetime(6),
+			modified_by varchar(140),
+			owner varchar(140),
+			docstatus int(1) not null default '0',
+			idx int(8) not null default '0',
+			parent varchar(140),
+parentfield varchar(140),
+parenttype varchar(140),
+index parent(parent))
+			ENGINE=InnoDB
+			ROW_FORMAT=DYNAMIC
+			CHARACTER SET=utf8mb4
+			COLLATE=utf8mb4_unicode_ci
+2025-06-30 11:21:30,628 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parent varchar(140)
+2025-06-30 11:21:30,630 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parenttype varchar(140)
+2025-06-30 11:21:30,633 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parentfield varchar(140)
+2025-06-30 11:21:30,775 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo recipient` ADD COLUMN `employee` varchar(140)
+2025-06-30 11:44:07,142 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-06-30 11:45:16,736 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-06-30 11:57:52,464 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parent varchar(140)
+2025-06-30 11:57:52,466 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parenttype varchar(140)
+2025-06-30 11:57:52,468 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parentfield varchar(140)
+2025-06-30 12:04:26,955 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-06-30 12:15:07,033 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-06-30 12:15:18,700 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-06-30 17:54:32,685 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-06-30 17:55:52,634 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-06-30 18:12:59,168 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-06-30 18:31:54,403 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-06-30 19:16:44,766 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-07-01 05:19:24,362 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-07-01 05:19:26,720 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-07-01 05:19:28,998 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)
+2025-07-01 05:37:38,593 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` ADD COLUMN `reference_doctype` varchar(140), ADD COLUMN `designation` varchar(140)
+2025-07-01 05:43:20,469 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` ADD COLUMN `recipient` varchar(140)
+2025-07-01 05:55:42,296 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140) default 'employee_name'
+2025-07-01 06:12:13,653 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-07-01 06:44:51,003 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parent varchar(140)
+2025-07-01 06:44:51,005 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parenttype varchar(140)
+2025-07-01 06:44:51,007 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parentfield varchar(140)
+2025-07-01 06:44:51,170 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo recipient` ADD COLUMN `employee_name` varchar(140)
+2025-07-01 06:45:40,483 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parent varchar(140)
+2025-07-01 06:45:40,485 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parenttype varchar(140)
+2025-07-01 06:45:40,487 WARNING database DDL Query made to DB:
+alter table `tabMemo recipient` add column if not exists parentfield varchar(140)
+2025-07-01 06:45:40,630 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo recipient` ADD COLUMN `designation` varchar(140)
+2025-07-01 07:06:58,132 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` ADD COLUMN `recipient_copy` varchar(140)
+2025-07-01 07:06:58,154 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140)
+2025-07-01 07:08:35,082 WARNING database DDL Query made to DB:
+ALTER TABLE `tabMemo` MODIFY `to` varchar(140), MODIFY `recipient_copy` varchar(140)
+2025-07-01 09:30:14,764 WARNING database DDL Query made to DB:
+alter table `tabDocType` add column if not exists migration_hash varchar(140)
+2025-07-01 09:30:16,901 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` DROP INDEX `print_heading`
+2025-07-01 09:30:18,620 WARNING database DDL Query made to DB:
+ALTER TABLE `tabPrint Heading` ADD UNIQUE INDEX IF NOT EXISTS print_heading (`print_heading`)

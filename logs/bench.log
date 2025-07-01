@@ -3199,3 +3199,177 @@ To avoid seeing this warning, set shallow_clone to false in your common_site_con
 2025-06-29 08:41:19,324 INFO /usr/local/bin/bench worker --queue short,default
 2025-06-29 08:41:20,511 INFO A newer version of bench is available: 5.25.1 → 5.25.7
 2025-06-29 08:51:06,721 INFO /home/frapadmin/gcihs-bench/env/bin/bench doctor
+2025-06-29 12:00:01,819 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-29 18:00:01,707 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-29 21:18:52,361 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-29 21:18:52,361 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-29 21:18:52,362 INFO /usr/local/bin/bench schedule
+2025-06-30 00:00:01,644 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-30 05:07:52,529 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 05:09:05,220 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 05:20:00,649 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 05:30:32,847 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 05:30:37,895 INFO /home/frapadmin/.local/bin/bench start
+2025-06-30 05:30:49,245 INFO /home/frapadmin/.local/bin/bench restart
+2025-06-30 05:30:53,614 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-06-30 05:30:57,052 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-06-30 05:30:57,782 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 05:30:57,786 INFO /usr/local/bin/bench schedule
+2025-06-30 05:30:57,837 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 06:00:02,054 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-30 11:53:12,567 INFO /usr/local/bin/bench schedule
+2025-06-30 11:53:12,567 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 11:53:12,567 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 11:58:07,192 INFO /home/frapadmin/.local/bin/bench restart
+2025-06-30 11:58:11,201 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-06-30 11:58:14,518 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-06-30 11:58:15,337 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 11:58:15,360 INFO /usr/local/bin/bench schedule
+2025-06-30 11:58:15,371 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 12:00:01,827 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-30 12:02:43,940 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 12:02:50,675 INFO /home/frapadmin/.local/bin/bench restart
+2025-06-30 12:02:51,431 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-06-30 12:02:53,930 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-06-30 12:02:54,766 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 12:02:54,770 INFO /usr/local/bin/bench schedule
+2025-06-30 12:02:54,822 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 17:34:17,194 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 17:34:28,832 INFO /home/frapadmin/.local/bin/bench restart
+2025-06-30 17:34:33,426 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-06-30 17:34:36,474 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-06-30 17:34:37,205 INFO /usr/local/bin/bench schedule
+2025-06-30 17:34:37,217 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 17:34:37,227 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 17:41:40,977 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 17:41:44,010 INFO /home/frapadmin/.local/bin/bench restart
+2025-06-30 17:41:44,724 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-06-30 17:41:47,477 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-06-30 17:41:48,336 INFO /usr/local/bin/bench schedule
+2025-06-30 17:41:48,359 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 17:41:48,361 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 17:52:16,761 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 17:52:20,153 INFO /home/frapadmin/.local/bin/bench restart
+2025-06-30 17:52:20,963 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-06-30 17:52:23,925 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-06-30 17:52:24,760 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 17:52:24,775 INFO /usr/local/bin/bench schedule
+2025-06-30 17:52:24,841 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 18:00:02,190 INFO /usr/local/bin/bench --verbose --site all backup
+2025-06-30 18:30:15,256 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 18:30:26,299 INFO /home/frapadmin/.local/bin/bench restart
+2025-06-30 18:30:32,119 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-06-30 18:30:34,871 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-06-30 18:30:36,167 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 18:30:36,193 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 18:30:36,198 INFO /usr/local/bin/bench schedule
+2025-06-30 22:00:33,144 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 22:00:37,651 INFO /home/frapadmin/.local/bin/bench restart
+2025-06-30 22:00:44,889 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-06-30 22:00:48,761 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-06-30 22:00:49,491 INFO /usr/local/bin/bench schedule
+2025-06-30 22:00:49,612 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 22:00:49,648 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 22:05:51,858 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-06-30 22:05:56,847 INFO /home/frapadmin/.local/bin/bench restart
+2025-06-30 22:05:57,629 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-06-30 22:06:00,738 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-06-30 22:06:01,538 INFO /usr/local/bin/bench worker --queue short,default
+2025-06-30 22:06:01,601 INFO /usr/local/bin/bench schedule
+2025-06-30 22:06:01,602 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-06-30 22:08:17,703 INFO /home/frapadmin/.local/bin/bench --site gcihs.local console
+2025-06-30 22:08:20,561 INFO /home/frapadmin/.local/bin/bench list-sites
+2025-06-30 22:08:24,946 INFO /home/frapadmin/.local/bin/bench --site erp.gcihs.local console
+2025-07-01 00:00:01,789 INFO /usr/local/bin/bench --verbose --site all backup
+2025-07-01 05:13:34,476 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 05:13:34,476 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 05:13:34,476 INFO /usr/local/bin/bench schedule
+2025-07-01 05:17:38,842 INFO /home/frapadmin/.local/bin/bench doctor
+2025-07-01 05:18:27,150 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 05:18:53,748 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 05:18:56,715 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 05:18:57,409 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 05:18:57,422 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 05:18:57,424 INFO /usr/local/bin/bench schedule
+2025-07-01 05:19:12,877 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-07-01 05:19:23,100 INFO /home/frapadmin/.local/bin/bench migrate
+2025-07-01 06:00:01,706 INFO /usr/local/bin/bench --verbose --site all backup
+2025-07-01 06:06:10,740 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-07-01 06:19:06,061 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-07-01 06:19:14,166 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 06:19:18,435 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 06:19:21,228 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 06:19:22,085 INFO /usr/local/bin/bench schedule
+2025-07-01 06:19:22,086 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 06:19:22,089 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 06:51:45,327 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 06:51:49,871 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 06:51:52,534 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 06:51:53,403 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 06:51:53,404 INFO /usr/local/bin/bench schedule
+2025-07-01 06:51:53,407 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 06:57:21,650 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 06:57:22,415 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 06:57:24,872 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 06:57:25,677 INFO /usr/local/bin/bench schedule
+2025-07-01 06:57:25,680 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 06:57:25,681 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 08:51:25,714 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 08:51:43,186 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 08:51:45,935 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 08:51:46,823 INFO /usr/local/bin/bench schedule
+2025-07-01 08:51:46,823 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 08:51:46,827 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 08:55:33,926 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 08:55:34,691 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 08:55:37,257 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 08:55:38,222 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 08:55:38,222 INFO /usr/local/bin/bench schedule
+2025-07-01 08:55:38,316 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 09:01:26,658 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 09:01:27,459 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 09:01:30,089 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 09:01:30,872 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 09:01:30,875 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 09:01:30,899 INFO /usr/local/bin/bench schedule
+2025-07-01 09:27:51,271 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 09:27:56,077 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 09:27:59,599 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 09:28:00,317 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 09:28:00,335 INFO /usr/local/bin/bench schedule
+2025-07-01 09:28:00,355 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 09:28:41,366 INFO /home/frapadmin/.local/bin/bench --site erp.gcihs.local reload-doc gcihs_app
+2025-07-01 09:28:54,126 INFO /home/frapadmin/.local/bin/bench --site erp.gcihs.local reload-doc memo
+2025-07-01 09:29:09,993 INFO /home/frapadmin/.local/bin/bench --site erp.gcihs.local reload-doc doctype memo
+2025-07-01 09:29:55,772 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 09:29:56,449 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 09:29:58,372 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 09:29:59,274 INFO /usr/local/bin/bench schedule
+2025-07-01 09:29:59,274 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 09:29:59,308 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 09:30:07,254 INFO /home/frapadmin/.local/bin/bench clear-cache
+2025-07-01 09:30:13,424 INFO /home/frapadmin/.local/bin/bench migrate
+2025-07-01 09:32:41,021 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 09:32:41,768 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 09:32:44,673 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 09:32:45,383 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 09:32:45,383 INFO /usr/local/bin/bench schedule
+2025-07-01 09:32:45,463 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 09:34:55,651 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 09:34:56,401 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 09:34:58,918 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 09:34:59,515 INFO /usr/local/bin/bench schedule
+2025-07-01 09:34:59,515 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 09:34:59,587 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 09:46:55,957 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 09:46:56,817 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 09:46:59,730 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 09:47:00,488 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 09:47:00,490 INFO /usr/local/bin/bench worker --queue long,default,short
+2025-07-01 09:47:00,491 INFO /usr/local/bin/bench schedule
+2025-07-01 09:47:57,481 INFO /home/frapadmin/.local/bin/bench restart
+2025-07-01 09:47:58,263 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-web:
+2025-07-01 09:48:00,551 DEBUG cd /home/frapadmin/gcihs-bench && sudo supervisorctl restart gcihs-bench-workers:
+2025-07-01 09:48:01,371 INFO /usr/local/bin/bench worker --queue short,default
+2025-07-01 09:48:01,371 INFO /usr/local/bin/bench schedule
+2025-07-01 09:48:01,380 INFO /usr/local/bin/bench worker --queue long,default,short

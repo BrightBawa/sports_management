@@ -21142,3 +21142,1477 @@ Realtime service listening on:  9000
 Realtime service listening on:  9000
 Realtime service listening on:  9000
 Realtime service listening on:  9000
+Realtime service listening on:  9000
+Error: Not Found
+    at Request.callback (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:845:17)
+    at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:18
+    at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+    at Stream.emit (node:events:517:28)
+    at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+    at Unzip.emit (node:events:517:28)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  status: 404,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'NOT FOUND',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-jvmfxbalfa not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"a2632d9054d1bc077f4606e6a1a476926a02e84ac2d7170a64f24a98\\\\\\"}\\"]"}',
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 24,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    request: Request {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'http://erp.gcihs.local/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jvmfxbalfa',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'http:',
+      host: 'erp.gcihs.local',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      [Symbol(kCapture)]: false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      socket: [Socket],
+      _header: 'GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jvmfxbalfa HTTP/1.1\r\n' +
+        'Host: erp.gcihs.local\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jvmfxbalfa',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'erp.gcihs.local',
+      protocol: 'http:',
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-jvmfxbalfa not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"a2632d9054d1bc077f4606e6a1a476926a02e84ac2d7170a64f24a98\\\\\\"}\\"]"}',
+    files: undefined,
+    buffered: true,
+    headers: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 05:02:09 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    header: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 05:02:09 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    statusCode: 404,
+    status: 404,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jvmfxbalfa (404)
+        at Response.toError (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:107:17)
+        at ResponseBase._setStatusProperties (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/response-base.js:107:48)
+        at new Response (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:44:8)
+        at Request._emitResponse (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:891:20)
+        at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:38
+        at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+        at Stream.emit (node:events:517:28)
+        at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+        at Unzip.emit (node:events:517:28)
+        at endReadableNT (node:internal/streams/readable:1400:12) {
+      status: 404,
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-jvmfxbalfa not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"a2632d9054d1bc077f4606e6a1a476926a02e84ac2d7170a64f24a98\\\\\\"}\\"]"}',
+      method: 'GET',
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jvmfxbalfa'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: true,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      exc_type: 'DoesNotExistError',
+      _server_messages: '["{\\"message\\": \\"Memo new-memo-jvmfxbalfa not found\\", \\"title\\": \\"Message\\", \\"indicator\\": \\"red\\", \\"raise_exception\\": 1, \\"__frappe_exc_id\\": \\"a2632d9054d1bc077f4606e6a1a476926a02e84ac2d7170a64f24a98\\"}"]'
+    },
+    pipe: [Function (anonymous)],
+    [Symbol(kCapture)]: false
+  }
+}
+Realtime service listening on:  9000
+Error: Not Found
+    at Request.callback (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:845:17)
+    at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:18
+    at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+    at Stream.emit (node:events:517:28)
+    at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+    at Unzip.emit (node:events:517:28)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  status: 404,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'NOT FOUND',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-zpwvdkrnam not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"329282ff1a5f60a853878ff6104f9fc7227783e802c6c1471ea4501b\\\\\\"}\\"]"}',
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 24,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    request: Request {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'http://erp.gcihs.local/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-zpwvdkrnam',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'http:',
+      host: 'erp.gcihs.local',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      [Symbol(kCapture)]: false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      socket: [Socket],
+      _header: 'GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-zpwvdkrnam HTTP/1.1\r\n' +
+        'Host: erp.gcihs.local\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-zpwvdkrnam',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'erp.gcihs.local',
+      protocol: 'http:',
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-zpwvdkrnam not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"329282ff1a5f60a853878ff6104f9fc7227783e802c6c1471ea4501b\\\\\\"}\\"]"}',
+    files: undefined,
+    buffered: true,
+    headers: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 05:32:37 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    header: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 05:32:37 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    statusCode: 404,
+    status: 404,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-zpwvdkrnam (404)
+        at Response.toError (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:107:17)
+        at ResponseBase._setStatusProperties (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/response-base.js:107:48)
+        at new Response (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:44:8)
+        at Request._emitResponse (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:891:20)
+        at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:38
+        at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+        at Stream.emit (node:events:517:28)
+        at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+        at Unzip.emit (node:events:517:28)
+        at endReadableNT (node:internal/streams/readable:1400:12) {
+      status: 404,
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-zpwvdkrnam not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"329282ff1a5f60a853878ff6104f9fc7227783e802c6c1471ea4501b\\\\\\"}\\"]"}',
+      method: 'GET',
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-zpwvdkrnam'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: true,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      exc_type: 'DoesNotExistError',
+      _server_messages: '["{\\"message\\": \\"Memo new-memo-zpwvdkrnam not found\\", \\"title\\": \\"Message\\", \\"indicator\\": \\"red\\", \\"raise_exception\\": 1, \\"__frappe_exc_id\\": \\"329282ff1a5f60a853878ff6104f9fc7227783e802c6c1471ea4501b\\"}"]'
+    },
+    pipe: [Function (anonymous)],
+    [Symbol(kCapture)]: false
+  }
+}
+Error: Not Found
+    at Request.callback (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:845:17)
+    at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:18
+    at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+    at Stream.emit (node:events:517:28)
+    at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+    at Unzip.emit (node:events:517:28)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  status: 404,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'NOT FOUND',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-hfaniipopm not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"0c89753181d0545167c7aec758fc30fa3e024029c704f76e3a3fed6f\\\\\\"}\\"]"}',
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 24,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    request: Request {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'http://erp.gcihs.local/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-hfaniipopm',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'http:',
+      host: 'erp.gcihs.local',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      [Symbol(kCapture)]: false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      socket: [Socket],
+      _header: 'GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-hfaniipopm HTTP/1.1\r\n' +
+        'Host: erp.gcihs.local\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-hfaniipopm',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'erp.gcihs.local',
+      protocol: 'http:',
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-hfaniipopm not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"0c89753181d0545167c7aec758fc30fa3e024029c704f76e3a3fed6f\\\\\\"}\\"]"}',
+    files: undefined,
+    buffered: true,
+    headers: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 05:47:10 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    header: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 05:47:10 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    statusCode: 404,
+    status: 404,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-hfaniipopm (404)
+        at Response.toError (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:107:17)
+        at ResponseBase._setStatusProperties (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/response-base.js:107:48)
+        at new Response (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:44:8)
+        at Request._emitResponse (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:891:20)
+        at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:38
+        at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+        at Stream.emit (node:events:517:28)
+        at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+        at Unzip.emit (node:events:517:28)
+        at endReadableNT (node:internal/streams/readable:1400:12) {
+      status: 404,
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-hfaniipopm not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"0c89753181d0545167c7aec758fc30fa3e024029c704f76e3a3fed6f\\\\\\"}\\"]"}',
+      method: 'GET',
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-hfaniipopm'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: true,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      exc_type: 'DoesNotExistError',
+      _server_messages: '["{\\"message\\": \\"Memo new-memo-hfaniipopm not found\\", \\"title\\": \\"Message\\", \\"indicator\\": \\"red\\", \\"raise_exception\\": 1, \\"__frappe_exc_id\\": \\"0c89753181d0545167c7aec758fc30fa3e024029c704f76e3a3fed6f\\"}"]'
+    },
+    pipe: [Function (anonymous)],
+    [Symbol(kCapture)]: false
+  }
+}
+Error: Not Found
+    at Request.callback (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:845:17)
+    at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:18
+    at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+    at Stream.emit (node:events:517:28)
+    at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+    at Unzip.emit (node:events:517:28)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  status: 404,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'NOT FOUND',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-wkuzmavrsd not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"cd4c60e4a9d1aead55fe251f2cec3c55d1308859d97f90af462aa198\\\\\\"}\\"]"}',
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 24,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    request: Request {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'http://erp.gcihs.local/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-wkuzmavrsd',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'http:',
+      host: 'erp.gcihs.local',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      [Symbol(kCapture)]: false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      socket: [Socket],
+      _header: 'GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-wkuzmavrsd HTTP/1.1\r\n' +
+        'Host: erp.gcihs.local\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-wkuzmavrsd',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'erp.gcihs.local',
+      protocol: 'http:',
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-wkuzmavrsd not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"cd4c60e4a9d1aead55fe251f2cec3c55d1308859d97f90af462aa198\\\\\\"}\\"]"}',
+    files: undefined,
+    buffered: true,
+    headers: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 06:07:13 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    header: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 06:07:13 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    statusCode: 404,
+    status: 404,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-wkuzmavrsd (404)
+        at Response.toError (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:107:17)
+        at ResponseBase._setStatusProperties (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/response-base.js:107:48)
+        at new Response (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:44:8)
+        at Request._emitResponse (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:891:20)
+        at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:38
+        at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+        at Stream.emit (node:events:517:28)
+        at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+        at Unzip.emit (node:events:517:28)
+        at endReadableNT (node:internal/streams/readable:1400:12) {
+      status: 404,
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-wkuzmavrsd not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"cd4c60e4a9d1aead55fe251f2cec3c55d1308859d97f90af462aa198\\\\\\"}\\"]"}',
+      method: 'GET',
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-wkuzmavrsd'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: true,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      exc_type: 'DoesNotExistError',
+      _server_messages: '["{\\"message\\": \\"Memo new-memo-wkuzmavrsd not found\\", \\"title\\": \\"Message\\", \\"indicator\\": \\"red\\", \\"raise_exception\\": 1, \\"__frappe_exc_id\\": \\"cd4c60e4a9d1aead55fe251f2cec3c55d1308859d97f90af462aa198\\"}"]'
+    },
+    pipe: [Function (anonymous)],
+    [Symbol(kCapture)]: false
+  }
+}
+Error: Not Found
+    at Request.callback (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:845:17)
+    at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:18
+    at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+    at Stream.emit (node:events:517:28)
+    at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+    at Unzip.emit (node:events:517:28)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  status: 404,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'NOT FOUND',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-fiziuornmo not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"63dad96d8318179d777b4587643518c7a85daf97d555180463cd2592\\\\\\"}\\"]"}',
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 24,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    request: Request {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'http://erp.gcihs.local/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-fiziuornmo',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'http:',
+      host: 'erp.gcihs.local',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      [Symbol(kCapture)]: false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      socket: [Socket],
+      _header: 'GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-fiziuornmo HTTP/1.1\r\n' +
+        'Host: erp.gcihs.local\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-fiziuornmo',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'erp.gcihs.local',
+      protocol: 'http:',
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-fiziuornmo not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"63dad96d8318179d777b4587643518c7a85daf97d555180463cd2592\\\\\\"}\\"]"}',
+    files: undefined,
+    buffered: true,
+    headers: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 06:10:21 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    header: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 06:10:21 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    statusCode: 404,
+    status: 404,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-fiziuornmo (404)
+        at Response.toError (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:107:17)
+        at ResponseBase._setStatusProperties (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/response-base.js:107:48)
+        at new Response (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:44:8)
+        at Request._emitResponse (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:891:20)
+        at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:38
+        at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+        at Stream.emit (node:events:517:28)
+        at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+        at Unzip.emit (node:events:517:28)
+        at endReadableNT (node:internal/streams/readable:1400:12) {
+      status: 404,
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-fiziuornmo not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"63dad96d8318179d777b4587643518c7a85daf97d555180463cd2592\\\\\\"}\\"]"}',
+      method: 'GET',
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-fiziuornmo'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: true,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      exc_type: 'DoesNotExistError',
+      _server_messages: '["{\\"message\\": \\"Memo new-memo-fiziuornmo not found\\", \\"title\\": \\"Message\\", \\"indicator\\": \\"red\\", \\"raise_exception\\": 1, \\"__frappe_exc_id\\": \\"63dad96d8318179d777b4587643518c7a85daf97d555180463cd2592\\"}"]'
+    },
+    pipe: [Function (anonymous)],
+    [Symbol(kCapture)]: false
+  }
+}
+Error: Not Found
+    at Request.callback (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:845:17)
+    at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:18
+    at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+    at Stream.emit (node:events:517:28)
+    at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+    at Unzip.emit (node:events:517:28)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  status: 404,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'NOT FOUND',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-spiebjjzfg not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"19ceeed37372fcee5d18caca1ee15c2fb2e5f92660da8d0c69efdf46\\\\\\"}\\"]"}',
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 24,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    request: Request {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'http://erp.gcihs.local/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-spiebjjzfg',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'http:',
+      host: 'erp.gcihs.local',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      [Symbol(kCapture)]: false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      socket: [Socket],
+      _header: 'GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-spiebjjzfg HTTP/1.1\r\n' +
+        'Host: erp.gcihs.local\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-spiebjjzfg',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'erp.gcihs.local',
+      protocol: 'http:',
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-spiebjjzfg not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"19ceeed37372fcee5d18caca1ee15c2fb2e5f92660da8d0c69efdf46\\\\\\"}\\"]"}',
+    files: undefined,
+    buffered: true,
+    headers: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 07:56:16 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    header: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 07:56:16 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    statusCode: 404,
+    status: 404,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-spiebjjzfg (404)
+        at Response.toError (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:107:17)
+        at ResponseBase._setStatusProperties (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/response-base.js:107:48)
+        at new Response (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:44:8)
+        at Request._emitResponse (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:891:20)
+        at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:38
+        at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+        at Stream.emit (node:events:517:28)
+        at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+        at Unzip.emit (node:events:517:28)
+        at endReadableNT (node:internal/streams/readable:1400:12) {
+      status: 404,
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-spiebjjzfg not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"19ceeed37372fcee5d18caca1ee15c2fb2e5f92660da8d0c69efdf46\\\\\\"}\\"]"}',
+      method: 'GET',
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-spiebjjzfg'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: true,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      exc_type: 'DoesNotExistError',
+      _server_messages: '["{\\"message\\": \\"Memo new-memo-spiebjjzfg not found\\", \\"title\\": \\"Message\\", \\"indicator\\": \\"red\\", \\"raise_exception\\": 1, \\"__frappe_exc_id\\": \\"19ceeed37372fcee5d18caca1ee15c2fb2e5f92660da8d0c69efdf46\\"}"]'
+    },
+    pipe: [Function (anonymous)],
+    [Symbol(kCapture)]: false
+  }
+}
+Error: Not Found
+    at Request.callback (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:845:17)
+    at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:18
+    at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+    at Stream.emit (node:events:517:28)
+    at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+    at Unzip.emit (node:events:517:28)
+    at endReadableNT (node:internal/streams/readable:1400:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+  status: 404,
+  response: <ref *1> Response {
+    _events: [Object: null prototype] {},
+    _eventsCount: 0,
+    _maxListeners: undefined,
+    res: IncomingMessage {
+      _readableState: [ReadableState],
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      socket: [Socket],
+      httpVersionMajor: 1,
+      httpVersionMinor: 1,
+      httpVersion: '1.1',
+      complete: true,
+      rawHeaders: [Array],
+      rawTrailers: [],
+      joinDuplicateHeaders: undefined,
+      aborted: false,
+      upgrade: false,
+      url: '',
+      method: null,
+      statusCode: 404,
+      statusMessage: 'NOT FOUND',
+      client: [Socket],
+      _consuming: false,
+      _dumped: false,
+      req: [ClientRequest],
+      setEncoding: [Function (anonymous)],
+      on: [Function (anonymous)],
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-jhnhtzyaos not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"085afb900185893b31e5a9f6e055eeb6d219fd792cb46f704068d893\\\\\\"}\\"]"}',
+      [Symbol(kCapture)]: false,
+      [Symbol(kHeaders)]: [Object],
+      [Symbol(kHeadersCount)]: 24,
+      [Symbol(kTrailers)]: null,
+      [Symbol(kTrailersCount)]: 0
+    },
+    request: Request {
+      _events: [Object: null prototype] {},
+      _eventsCount: 0,
+      _maxListeners: undefined,
+      _enableHttp2: false,
+      _agent: false,
+      _formData: null,
+      method: 'GET',
+      url: 'http://erp.gcihs.local/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jhnhtzyaos',
+      _header: [Object],
+      header: [Object],
+      writable: true,
+      _redirects: 0,
+      _maxRedirects: 5,
+      cookies: '',
+      qs: {},
+      _query: [],
+      qsRaw: [],
+      _redirectList: [],
+      _streamRequest: false,
+      _lookup: undefined,
+      req: [ClientRequest],
+      protocol: 'http:',
+      host: 'erp.gcihs.local',
+      _endCalled: true,
+      _callback: [Function (anonymous)],
+      res: [IncomingMessage],
+      _resBuffered: true,
+      response: [Circular *1],
+      called: true,
+      [Symbol(kCapture)]: false
+    },
+    req: ClientRequest {
+      _events: [Object: null prototype],
+      _eventsCount: 3,
+      _maxListeners: undefined,
+      outputData: [],
+      outputSize: 0,
+      writable: true,
+      destroyed: true,
+      _last: true,
+      chunkedEncoding: false,
+      shouldKeepAlive: false,
+      maxRequestsOnConnectionReached: false,
+      _defaultKeepAlive: true,
+      useChunkedEncodingByDefault: false,
+      sendDate: false,
+      _removedConnection: false,
+      _removedContLen: false,
+      _removedTE: false,
+      strictContentLength: false,
+      _contentLength: 0,
+      _hasBody: true,
+      _trailer: '',
+      finished: true,
+      _headerSent: true,
+      _closed: true,
+      socket: [Socket],
+      _header: 'GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jhnhtzyaos HTTP/1.1\r\n' +
+        'Host: erp.gcihs.local\r\n' +
+        'Accept-Encoding: gzip, deflate\r\n' +
+        'Content-Type: application/x-www-form-urlencoded\r\n' +
+        'Connection: close\r\n' +
+        '\r\n',
+      _keepAliveTimeout: 0,
+      _onPendingData: [Function: nop],
+      agent: [Agent],
+      socketPath: undefined,
+      method: 'GET',
+      maxHeaderSize: undefined,
+      insecureHTTPParser: undefined,
+      joinDuplicateHeaders: undefined,
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jhnhtzyaos',
+      _ended: true,
+      res: [IncomingMessage],
+      aborted: false,
+      timeoutCb: null,
+      upgradeOrConnect: false,
+      parser: null,
+      maxHeadersCount: null,
+      reusedSocket: false,
+      host: 'erp.gcihs.local',
+      protocol: 'http:',
+      [Symbol(kCapture)]: false,
+      [Symbol(kBytesWritten)]: 0,
+      [Symbol(kNeedDrain)]: false,
+      [Symbol(corked)]: 0,
+      [Symbol(kOutHeaders)]: [Object: null prototype],
+      [Symbol(errored)]: null,
+      [Symbol(kHighWaterMark)]: 16384,
+      [Symbol(kRejectNonStandardBodyWrites)]: false,
+      [Symbol(kUniqueHeaders)]: null
+    },
+    text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-jhnhtzyaos not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"085afb900185893b31e5a9f6e055eeb6d219fd792cb46f704068d893\\\\\\"}\\"]"}',
+    files: undefined,
+    buffered: true,
+    headers: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 07:57:09 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    header: {
+      server: 'nginx',
+      date: 'Mon, 30 Jun 2025 07:57:09 GMT',
+      'content-type': 'application/json',
+      'transfer-encoding': 'chunked',
+      connection: 'close',
+      vary: 'Accept-Encoding',
+      'set-cookie': [Array],
+      'content-encoding': 'gzip'
+    },
+    statusCode: 404,
+    status: 404,
+    statusType: 4,
+    info: false,
+    ok: false,
+    redirect: false,
+    clientError: true,
+    serverError: false,
+    error: Error: cannot GET /api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jhnhtzyaos (404)
+        at Response.toError (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:107:17)
+        at ResponseBase._setStatusProperties (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/response-base.js:107:48)
+        at new Response (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/response.js:44:8)
+        at Request._emitResponse (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:891:20)
+        at /home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/index.js:1070:38
+        at IncomingMessage.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/parsers/json.js:21:7)
+        at Stream.emit (node:events:517:28)
+        at Unzip.<anonymous> (/home/frapadmin/gcihs-bench/apps/frappe/node_modules/superagent/lib/node/unzip.js:54:12)
+        at Unzip.emit (node:events:517:28)
+        at endReadableNT (node:internal/streams/readable:1400:12) {
+      status: 404,
+      text: '{"exc_type":"DoesNotExistError","_server_messages":"[\\"{\\\\\\"message\\\\\\": \\\\\\"Memo new-memo-jhnhtzyaos not found\\\\\\", \\\\\\"title\\\\\\": \\\\\\"Message\\\\\\", \\\\\\"indicator\\\\\\": \\\\\\"red\\\\\\", \\\\\\"raise_exception\\\\\\": 1, \\\\\\"__frappe_exc_id\\\\\\": \\\\\\"085afb900185893b31e5a9f6e055eeb6d219fd792cb46f704068d893\\\\\\"}\\"]"}',
+      method: 'GET',
+      path: '/api/method/frappe.realtime.can_subscribe_doc?sid=51fa4fb98f36013a0ff6f6e8224a8afc7eb18d056692657d441051b4&doctype=Memo&docname=new-memo-jhnhtzyaos'
+    },
+    created: false,
+    accepted: false,
+    noContent: false,
+    badRequest: false,
+    unauthorized: false,
+    notAcceptable: false,
+    forbidden: false,
+    notFound: true,
+    unprocessableEntity: false,
+    type: 'application/json',
+    links: {},
+    setEncoding: [Function: bound ],
+    redirects: [],
+    _body: {
+      exc_type: 'DoesNotExistError',
+      _server_messages: '["{\\"message\\": \\"Memo new-memo-jhnhtzyaos not found\\", \\"title\\": \\"Message\\", \\"indicator\\": \\"red\\", \\"raise_exception\\": 1, \\"__frappe_exc_id\\": \\"085afb900185893b31e5a9f6e055eeb6d219fd792cb46f704068d893\\"}"]'
+    },
+    pipe: [Function (anonymous)],
+    [Symbol(kCapture)]: false
+  }
+}
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000
+Realtime service listening on:  9000

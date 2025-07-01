@@ -1,0 +1,1342 @@
+2025-01-09 05:14:17,760 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 195, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 120, in __init__
+    self.make_session(resume=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 213, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 221, in __init__
+    self.resume()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 297, in resume
+    self.validate_user()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 229, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1221, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1164, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/path_resolver.py", line 117, in resolve_redirect
+    redirects = frappe.get_hooks("website_redirects")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 132, in application
+    response = handle_exception(e)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 395, in handle_exception
+    response = get_response("message", http_status_code=http_status_code)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/utils.py", line 530, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 172, in get_website_settings
+    hooks = frappe.get_hooks()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 161, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+2025-01-09 05:14:17,922 ERROR frappe Could not take error snapshot: invalid character '├' (U+251C) (hooks.py, line 2)
+Site: erp.gcihs.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 195, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 120, in __init__
+    self.make_session(resume=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 213, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 221, in __init__
+    self.resume()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 297, in resume
+    self.validate_user()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 229, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1221, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1164, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+2025-01-09 05:14:17,931 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 195, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 120, in __init__
+    self.make_session(resume=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 213, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 221, in __init__
+    self.resume()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 297, in resume
+    self.validate_user()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 229, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1221, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1164, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/path_resolver.py", line 117, in resolve_redirect
+    redirects = frappe.get_hooks("website_redirects")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 132, in application
+    response = handle_exception(e)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 395, in handle_exception
+    response = get_response("message", http_status_code=http_status_code)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/utils.py", line 530, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 172, in get_website_settings
+    hooks = frappe.get_hooks()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 161, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+2025-01-09 05:14:20,097 ERROR frappe Could not take error snapshot: invalid character '├' (U+251C) (hooks.py, line 2)
+Site: erp.gcihs.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 195, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 120, in __init__
+    self.make_session(resume=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 213, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 221, in __init__
+    self.resume()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 297, in resume
+    self.validate_user()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 229, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1221, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1164, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+2025-01-09 05:14:20,103 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 195, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 120, in __init__
+    self.make_session(resume=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 213, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 221, in __init__
+    self.resume()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 297, in resume
+    self.validate_user()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 229, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1221, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1164, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/path_resolver.py", line 117, in resolve_redirect
+    redirects = frappe.get_hooks("website_redirects")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 132, in application
+    response = handle_exception(e)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 395, in handle_exception
+    response = get_response("message", http_status_code=http_status_code)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/utils.py", line 530, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 172, in get_website_settings
+    hooks = frappe.get_hooks()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 161, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+2025-01-09 05:14:24,323 ERROR frappe Could not take error snapshot: invalid character '├' (U+251C) (hooks.py, line 2)
+Site: erp.gcihs.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 195, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 120, in __init__
+    self.make_session(resume=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 213, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 221, in __init__
+    self.resume()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 297, in resume
+    self.validate_user()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 229, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1221, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1164, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/error.py", line 86, in log_error_snapshot
+    log_error(title=str(exception), defer_insert=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/error.py", line 61, in log_error
+    error_log = frappe.get_doc(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+2025-01-09 05:14:24,332 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 99, in application
+    init_request(request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 195, in init_request
+    frappe.local.http_request = HTTPRequest()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 44, in __init__
+    self.set_session()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 78, in set_session
+    frappe.local.login_manager = LoginManager()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 120, in __init__
+    self.make_session(resume=True)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/auth.py", line 213, in make_session
+    frappe.local.session_obj = Session(
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 221, in __init__
+    self.resume()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 297, in resume
+    self.validate_user()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/sessions.py", line 229, in validate_user
+    if not frappe.get_cached_value("User", self.user, "enabled"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1221, in get_cached_value
+    doc = get_cached_doc(doctype, name)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1164, in get_cached_doc
+    doc = get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1290, in get_doc
+    doc = frappe.model.document.get_doc(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/document.py", line 83, in get_doc
+    controller = get_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 70, in get_controller
+    site_controllers[doctype] = import_controller(doctype)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/model/base_document.py", line 88, in import_controller
+    class_overrides = frappe.get_hooks("override_doctype_class")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 19, in get_response
+    endpoint, renderer_instance = path_resolver.resolve()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/path_resolver.py", line 38, in resolve
+    resolve_redirect(self.path, request.query_string)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/path_resolver.py", line 117, in resolve_redirect
+    redirects = frappe.get_hooks("website_redirects")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 132, in application
+    response = handle_exception(e)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 395, in handle_exception
+    response = get_response("message", http_status_code=http_status_code)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/serve.py", line 28, in get_response
+    response = ErrorPage(exception=e).render()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 84, in render
+    html = self.get_html()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/utils.py", line 530, in cache_html_decorator
+    html = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/template_page.py", line 92, in get_html
+    self.init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/error_page.py", line 14, in init_context
+    super().init_context()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/page_renderers/base_template_page.py", line 15, in init_context
+    self.context.update(get_website_settings())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/website/doctype/website_settings/website_settings.py", line 172, in get_website_settings
+    hooks = frappe.get_hooks()
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 57, in wrapper
+    return frappe.local.request_cache[func][args_key]
+KeyError: 5740354900026072187
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 161, in run_after_request_hooks
+    for after_request_task in frappe.get_hooks("after_request"):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1598, in get_hooks
+    hooks = _dict(_load_app_hooks())
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/utils/caching.py", line 59, in wrapper
+    return_val = func(*args, **kwargs)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1567, in _load_app_hooks
+    app_hooks = get_module(f"{app}.hooks")
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1433, in get_module
+    return importlib.import_module(modulename)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/frapadmin/gcihs-bench/apps/erpnext/erpnext/hooks.py", line 2
+    ├── id_sync_manager/
+    ^
+SyntaxError: invalid character '├' (U+251C)
+2025-01-09 05:52:11,793 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-cnwzsfhgfz","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-02","first_name":"Ben","middle_name":"Bay","last_name":"Boa","student_email_id":"123-02","gender":"Male"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 05:52:26,774 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-cnwzsfhgfz","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-02","first_name":"Ben","middle_name":"Bay","last_name":"Boa","student_email_id":"123-02","gender":"Male"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 05:54:11,807 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-cnwzsfhgfz","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-02","first_name":"Ben","middle_name":"Bay","last_name":"Boa","student_email_id":"123-02","gender":"Male"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 05:55:16,212 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-cnwzsfhgfz","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-02","first_name":"Ben","middle_name":"Bay","last_name":"Boa","student_email_id":"123-02","gender":"Male"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 05:56:18,060 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-tqptjqcocs","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-02","first_name":"Ben","middle_name":"Boa","last_name":"Bay","student_email_id":"123-02@gcihs.edu.gh","gender":"Male"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 05:57:19,837 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-tqptjqcocs","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-02","first_name":"Ben","middle_name":"Boa","last_name":"Bay","student_email_id":"123-02@gcihs.edu.gh","gender":"Male"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 05:58:17,300 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-tqptjqcocs","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-02","first_name":"Ben","middle_name":"Boa","last_name":"Bay","student_email_id":"123-02@gcihs.edu.gh","gender":"Male"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 05:59:46,627 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-tqptjqcocs","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-02","first_name":"Ben","middle_name":"Boa","last_name":"Bay","student_email_id":"123-02@gcihs.edu.gh","gender":"Male"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 06:09:02,768 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-yhmzadszme","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-03","first_name":"Be","middle_name":"Ba","last_name":"Bu","student_email_id":"123-03@gcihs.edu.gh","gender":"Male"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 13:24:44,571 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'employee': '0660', 'email': 'wtbaah@gcihs.edu.gh', 'cmd': 'erpnext.setup.doctype.employee.employee.create_user'}
+2025-01-09 17:19:00,386 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-kwecqopcqi","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-01","first_name":"Bright ","middle_name":"Kofi","last_name":"Bawa","student_email_id":"123-01@gcihs.edu.gh"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 17:19:32,629 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hsgbavuiji","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-01","student_email_id":"123-01@gcihs.edu.gh","first_name":"B","middle_name":"B","last_name":"B"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 18:18:28,653 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hsgbavuiji","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-01","student_email_id":"123-01@gcihs.edu.gh","first_name":"B","middle_name":"B","last_name":"B"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 18:38:08,786 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-saxazfmdad","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123","first_name":"A","last_name":"A","student_email_id":"123@gcihs.edu.gh"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 18:38:27,632 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-saxazfmdad","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123","first_name":"A","last_name":"A","student_email_id":"123@gcihs.edu.gh"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 18:39:51,016 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-kwesbfglwn","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-09","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"1234","first_name":"Bright","student_email_id":"123@gcihs.edu.gh"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-09 22:40:51,125 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {'cmd': 'login', 'usr': 'wtbaah@gcihs.edu.gh', 'pwd': '********'}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    frappe.call(after_request_task, response=response, request=request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1725, in call
+    return fn(*args, **newargs)
+  File "/home/frapadmin/gcihs-bench/apps/insights/insights/insights/doctype/insights_data_source_v3/insights_data_source_v3.py", line 304, in after_request
+    for db in frappe.local.insights_db_connections.values():
+  File "/home/frapadmin/gcihs-bench/env/lib/python3.10/site-packages/werkzeug/local.py", line 88, in __getattr__
+    raise AttributeError(name)
+AttributeError: insights_db_connections
+2025-01-09 22:41:07,149 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {'cmd': 'login', 'usr': 'wtbaah@gcihs.edu.gh', 'pwd': '********'}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    frappe.call(after_request_task, response=response, request=request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1725, in call
+    return fn(*args, **newargs)
+  File "/home/frapadmin/gcihs-bench/apps/insights/insights/insights/doctype/insights_data_source_v3/insights_data_source_v3.py", line 304, in after_request
+    for db in frappe.local.insights_db_connections.values():
+  File "/home/frapadmin/gcihs-bench/env/lib/python3.10/site-packages/werkzeug/local.py", line 88, in __getattr__
+    raise AttributeError(name)
+AttributeError: insights_db_connections
+2025-01-09 22:41:08,188 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {'cmd': 'login', 'usr': 'wtbaah@gcihs.edu.gh', 'pwd': '********'}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    frappe.call(after_request_task, response=response, request=request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1725, in call
+    return fn(*args, **newargs)
+  File "/home/frapadmin/gcihs-bench/apps/insights/insights/insights/doctype/insights_data_source_v3/insights_data_source_v3.py", line 304, in after_request
+    for db in frappe.local.insights_db_connections.values():
+  File "/home/frapadmin/gcihs-bench/env/lib/python3.10/site-packages/werkzeug/local.py", line 88, in __getattr__
+    raise AttributeError(name)
+AttributeError: insights_db_connections
+2025-01-11 05:03:50,845 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {'cmd': 'login', 'usr': 'administrator', 'pwd': '********'}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    frappe.call(after_request_task, response=response, request=request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1725, in call
+    return fn(*args, **newargs)
+  File "/home/frapadmin/gcihs-bench/apps/insights/insights/insights/doctype/insights_data_source_v3/insights_data_source_v3.py", line 304, in after_request
+    for db in frappe.local.insights_db_connections.values():
+  File "/home/frapadmin/gcihs-bench/env/lib/python3.10/site-packages/werkzeug/local.py", line 88, in __getattr__
+    raise AttributeError(name)
+AttributeError: insights_db_connections
+2025-01-11 07:10:21,848 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-zabdvlagwj","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"hshj","first_name":"sdvs","student_email_id":"aq@v.km"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:14:27,180 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-zabdvlagwj","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"hshj","first_name":"sdvs","student_email_id":"aq@v.km"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:16:50,371 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-nmilffaqip","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"skjdbsiuj","first_name":"ewcwd","student_email_id":"121@hfhf.vovo"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:21:02,129 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-nmilffaqip","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"skjdbsiuj","first_name":"ewcwd","student_email_id":"121@hfhf.vovo"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:21:49,402 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-azgyzdmgwg","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"hdht","student_email_id":"deserz@hvj.com","first_name":"hgcgch"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:26:43,044 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-azgyzdmgwg","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"hdht","student_email_id":"deserz@hvj.com","first_name":"hgcgch"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:30:16,584 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-pvjhnnfyta","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"thdtry","first_name":"ftfhtd","student_email_id":"ftdgrrg@gdgfx.com"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:33:43,637 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-qelywrdmsz","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"fgxfgx","first_name":"jhvhg","student_email_id":"zzdrfzw@mbh.cyuvhg"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:39:18,365 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-ifwxuyflum","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"fsfes","first_name":"dsdjks","student_email_id":"sd@jskdjks.ckdnvjd"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:44:31,415 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-ifwxuyflum","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"fsfes","first_name":"dsdjks","student_email_id":"sd@jskdjks.ckdnvjd"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:45:01,693 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-ifwxuyflum","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"fsfes","first_name":"dsdjks","student_email_id":"sd@jskdjks.ckdnvjd"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:51:13,841 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-ifwxuyflum","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"fsfes","first_name":"dsdjks","student_email_id":"sd@jskdjks.ckdnvjd"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:52:58,076 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-ifwxuyflum","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"fsfes","first_name":"dsdjks","student_email_id":"sd@jskdjks.ckdnvjd"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 07:54:10,945 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-divlrgikiw","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"sdhjajhd","first_name":"sdbhjbdja","middle_name":"","student_email_id":"shdjk@hbjshd.cdolkdjs"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 08:00:18,976 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-divlrgikiw","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"sdhjajhd","first_name":"sdbhjbdja","middle_name":"","student_email_id":"shdjk@hbjshd.cdolkdjs"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 08:01:01,058 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-divlrgikiw","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"sdhjajhd","first_name":"sdbhjbdja","middle_name":"","student_email_id":"shdjk@hbjshd.cdolkdjs"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 08:01:05,587 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-divlrgikiw","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"sdhjajhd","first_name":"sdbhjbdja","middle_name":"","student_email_id":"shdjk@hbjshd.cdolkdjs"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 08:01:45,737 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-divlrgikiw","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"sdhjajhd","first_name":"sdbhjbdja","middle_name":"","student_email_id":"shdjk@hbjshd.cdolkdjs"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 08:04:27,063 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-bzmhjsdxjk","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"Bright-123","first_name":"Bright","middle_name":"Kofi","last_name":"Bawa","student_email_id":"bb@gmail.com"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-11 10:40:57,404 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-ctqliaxnjl","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-11","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"Love ","first_name":"brig","student_email_id":"123456@gh.com"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-12 05:25:31,775 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {'cmd': 'login', 'usr': 'administrator', 'pwd': '********'}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    frappe.call(after_request_task, response=response, request=request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1725, in call
+    return fn(*args, **newargs)
+  File "/home/frapadmin/gcihs-bench/apps/insights/insights/insights/doctype/insights_data_source_v3/insights_data_source_v3.py", line 304, in after_request
+    for db in frappe.local.insights_db_connections.values():
+  File "/home/frapadmin/gcihs-bench/env/lib/python3.10/site-packages/werkzeug/local.py", line 88, in __getattr__
+    raise AttributeError(name)
+AttributeError: insights_db_connections
+2025-01-12 07:57:34,245 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-lraqqdgxmg","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-12","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"1234-001","first_name":"Bright ","last_name":"Bawa","student_email_id":"1234-001@g.com"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-12 08:04:05,152 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-lraqqdgxmg","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-12","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"1234-001","first_name":"Bright ","last_name":"Bawa","student_email_id":"1234-001@g.com"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-13 05:17:23,355 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-qpeomsqdjs","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-13","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"123-001","first_name":"Bright","middle_name":"Kofi","last_name":"Bawa","student_email_id":"123-001@gcihs.edu.gh"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-13 12:29:13,521 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'employee': '0715', 'email': 'saddo@gcihs.edu.gh', 'cmd': 'erpnext.setup.doctype.employee.employee.create_user'}
+2025-01-13 17:00:57,374 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {'cmd': 'login', 'usr': 'administrator', 'pwd': '********'}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    frappe.call(after_request_task, response=response, request=request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1725, in call
+    return fn(*args, **newargs)
+  File "/home/frapadmin/gcihs-bench/apps/insights/insights/insights/doctype/insights_data_source_v3/insights_data_source_v3.py", line 304, in after_request
+    for db in frappe.local.insights_db_connections.values():
+  File "/home/frapadmin/gcihs-bench/env/lib/python3.10/site-packages/werkzeug/local.py", line 88, in __getattr__
+    raise AttributeError(name)
+AttributeError: insights_db_connections
+2025-01-14 12:53:53,742 ERROR frappe Failed to run after request hook
+Site: erp.gcihs.local
+Form Dict: {'cmd': 'login', 'usr': 'administrator', 'pwd': '********'}
+Traceback (most recent call last):
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 146, in application
+    run_after_request_hooks(request, response)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/app.py", line 162, in run_after_request_hooks
+    frappe.call(after_request_task, response=response, request=request)
+  File "/home/frapadmin/gcihs-bench/apps/frappe/frappe/__init__.py", line 1725, in call
+    return fn(*args, **newargs)
+  File "/home/frapadmin/gcihs-bench/apps/insights/insights/insights/doctype/insights_data_source_v3/insights_data_source_v3.py", line 304, in after_request
+    for db in frappe.local.insights_db_connections.values():
+  File "/home/frapadmin/gcihs-bench/env/lib/python3.10/site-packages/werkzeug/local.py", line 88, in __getattr__
+    raise AttributeError(name)
+AttributeError: insights_db_connections
+2025-01-14 15:39:17,920 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-pcefgdlcee","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-14","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"222","first_name":"sdvsdv","student_email_id":"12@hjhsds"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-14 16:15:42,350 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-umndsshjwn","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-14","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"1234-001","first_name":"Bright","last_name":"Bawa","custom_student_id":"1234-001","student_email_id":"bb.com"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-14 16:16:05,590 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-umndsshjwn","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-14","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"1234-001","first_name":"Bright","last_name":"Bawa","custom_student_id":"1234-001","student_email_id":"bb.com"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-14 16:16:34,030 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hiauayzpil","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-14","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"1234","first_name":"BR","custom_student_id":"1234","student_email_id":"v.vm"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-14 16:19:10,359 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hiauayzpil","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-14","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"1234","first_name":"BR","custom_student_id":"1234","student_email_id":"v.vm"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-14 16:19:13,829 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hiauayzpil","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-14","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"1234","first_name":"BR","custom_student_id":"1234","student_email_id":"v.vm"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-14 16:23:04,932 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hiauayzpil","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-14","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"1234","first_name":"BR","custom_student_id":"1234","student_email_id":"v.vm"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-15 23:53:37,033 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hujvvcvazg","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-15","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"223-002","custom_student_id":"223-002","first_name":"Brig","last_name":"Baw","student_email_id":"223-002@gcom.co"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-15 23:55:08,058 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hujvvcvazg","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-15","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"223-002","custom_student_id":"223-002","first_name":"Brig","last_name":"Baw","student_email_id":"223-002@gcom.co"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-15 23:55:17,839 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hujvvcvazg","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-15","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"223-002","custom_student_id":"223-002","first_name":"Brig","last_name":"Baw","student_email_id":"223-002@gcom.co"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
+2025-01-15 23:56:22,617 ERROR frappe New Exception collected in error log
+Site: erp.gcihs.local
+Form Dict: {'doc': '{"docstatus":0,"doctype":"Student","name":"new-student-hujvvcvazg","__islocal":1,"__unsaved":1,"owner":"Administrator","enabled":1,"naming_series":"EDU-STU-.YYYY.-","joining_date":"2025-01-15","blood_group":"","country":"Ghana","guardians":[],"siblings":[],"__newname":"223-002","custom_student_id":"223-002","first_name":"Brig","last_name":"Baw","student_email_id":"223-002@gcom.co"}', 'action': 'Save', 'cmd': 'frappe.desk.form.save.savedocs'}
