@@ -1,1 +1,90 @@
-git t .qodo
+# Frappe Bench .gitignore
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.Python
+env/
+venv/
+ENV/
+*.sqlite
+
+# Node
+node_modules/
+.npm/
+
+# Logs - ALL log files
+logs/
+*.log
+*.log.*
+
+# Config files with sensitive data and runtime configs
+config/redis_cache.conf
+config/redis_queue.conf
+config/redis_cache.acl
+config/redis_queue.acl
+config/supervisor.conf
+config/nginx.conf
+config/pids/
+
+# Process ID files
+*.pid
+
+# Site-specific runtime files
+sites/*/private/
+sites/*/public/files/
+sites/*/locks/
+sites/*/task-logs/
+sites/*/error-snapshots/
+sites/*/logs/
+sites/*/indexes/
+sites/*/touched_tables.json
+sites/assets/
+sites/.assets/
+sites/currentsite.txt
+
+# Database files
+*.duckdb
+*.duckdb.wal
+
+# Backups
+backups/
+sites/*/private/backups/
+*.sql
+*.sql.gz
+*.dump
+dump.rdb
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.qodo
+
+# Frappe specific
+patches.txt
+pyrightconfig.json
+get-pip.py
+
+# Archives
+archived/
+*.zip
+*.tar
+*.tar.gz
+*.sha256
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
