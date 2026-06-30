@@ -26,6 +26,9 @@ logs/
 *.log
 *.log.*
 
+# App checkouts are managed by their own repositories
+apps/*
+
 # Config files with sensitive data and runtime configs
 config/redis_cache.conf
 config/redis_queue.conf
@@ -33,12 +36,22 @@ config/redis_cache.acl
 config/redis_queue.acl
 config/supervisor.conf
 config/nginx.conf
+config/nginx.conf.new
+config/ssl/
+config/*.lock
+config/scheduler_process
 config/pids/
 
 # Process ID files
 *.pid
 
 # Site-specific runtime files
+sites/apps.json
+sites/common_site_config.json
+sites/excluded_apps.txt
+sites/*/*.db
+sites/*/site_config.json
+sites/*/.test_log
 sites/*/private/
 sites/*/public/files/
 sites/*/locks/
