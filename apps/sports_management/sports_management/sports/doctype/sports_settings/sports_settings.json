@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_academic_year",
+  "default_academic_term",
+  "default_campus",
+  "athlete_profile_route",
+  "team_profile_route",
+  "enable_public_athlete_profiles",
+  "require_profile_approval",
+  "default_medical_clearance_validity_days",
+  "results_approval_required"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_academic_year",
+   "fieldtype": "Link",
+   "label": "Default Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "default_academic_term",
+   "fieldtype": "Link",
+   "label": "Default Academic Term",
+   "options": "Academic Term"
+  },
+  {
+   "fieldname": "default_campus",
+   "fieldtype": "Data",
+   "label": "Default Campus"
+  },
+  {
+   "default": "athletes",
+   "fieldname": "athlete_profile_route",
+   "fieldtype": "Data",
+   "label": "Athlete Profile Route"
+  },
+  {
+   "default": "teams",
+   "fieldname": "team_profile_route",
+   "fieldtype": "Data",
+   "label": "Team Profile Route"
+  },
+  {
+   "default": "1",
+   "fieldname": "enable_public_athlete_profiles",
+   "fieldtype": "Check",
+   "label": "Enable Public Athlete Profiles"
+  },
+  {
+   "default": "1",
+   "fieldname": "require_profile_approval",
+   "fieldtype": "Check",
+   "label": "Require Profile Approval"
+  },
+  {
+   "fieldname": "default_medical_clearance_validity_days",
+   "fieldtype": "Int",
+   "label": "Default Medical Clearance Validity Days"
+  },
+  {
+   "default": "1",
+   "fieldname": "results_approval_required",
+   "fieldtype": "Check",
+   "label": "Results Approval Required"
+  }
+ ],
+ "issingle": 1,
+ "module": "Sports",
+ "name": "Sports Settings",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Manager"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Sports Administrator"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

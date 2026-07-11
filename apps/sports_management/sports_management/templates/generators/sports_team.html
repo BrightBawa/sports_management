@@ -1,0 +1,24 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% include "templates/includes/sports/styles.html" %}
+<section class="sports-site">
+  <div class="sports-hero">
+    <h1>{{ doc.team_name }}</h1>
+    <p class="sports-meta">{{ doc.season or "" }}{% if sport_row %} · <a href="/{{ sport_row.route }}">{{ sport_row.sport_name }}</a>{% endif %}</p>
+    {% if doc.description %}<div>{{ doc.description }}</div>{% endif %}
+  </div>
+
+  {% if athletes %}
+  <h3>Current Athletes</h3>
+  <div class="sports-grid">
+    {% for athlete in athletes %}
+    <article class="sports-card">
+      <h4><a href="/{{ athlete.route }}">{{ athlete.public_name }}</a></h4>
+      <p class="sports-meta">{{ athlete.preferred_position or "" }}{% if athlete.jersey_number %} · #{{ athlete.jersey_number }}{% endif %}</p>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

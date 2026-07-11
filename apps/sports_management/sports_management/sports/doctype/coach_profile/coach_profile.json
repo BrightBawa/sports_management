@@ -1,0 +1,162 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "coach_type",
+  "employee",
+  "instructor",
+  "coach_name",
+  "public_photo",
+  "coaching_role",
+  "sport_specialties",
+  "biography",
+  "contact_visibility",
+  "slug",
+  "route",
+  "status",
+  "publish_coach_profile",
+  "profile_status",
+  "published_on"
+ ],
+ "fields": [
+  {
+   "default": "Internal",
+   "fieldname": "coach_type",
+   "fieldtype": "Select",
+   "label": "Coach Type",
+   "options": "\nInternal\nExternal"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "instructor",
+   "fieldtype": "Link",
+   "label": "Instructor",
+   "options": "Instructor"
+  },
+  {
+   "fieldname": "coach_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Coach Name"
+  },
+  {
+   "fieldname": "public_photo",
+   "fieldtype": "Attach Image",
+   "label": "Public Photo"
+  },
+  {
+   "fieldname": "coaching_role",
+   "fieldtype": "Data",
+   "label": "Coaching Role"
+  },
+  {
+   "fieldname": "sport_specialties",
+   "fieldtype": "Small Text",
+   "label": "Sport Specialties"
+  },
+  {
+   "fieldname": "biography",
+   "fieldtype": "Text Editor",
+   "label": "Biography"
+  },
+  {
+   "default": "Internal",
+   "fieldname": "contact_visibility",
+   "fieldtype": "Select",
+   "label": "Contact Visibility",
+   "options": "\nHidden\nInternal\nPublic"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Slug",
+   "unique": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nInactive"
+  },
+  {
+   "default": "0",
+   "fieldname": "publish_coach_profile",
+   "fieldtype": "Check",
+   "label": "Publish Coach Profile"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "profile_status",
+   "fieldtype": "Select",
+   "label": "Profile Status",
+   "options": "\nDraft\nPublished\nUnpublished"
+  },
+  {
+   "fieldname": "published_on",
+   "fieldtype": "Datetime",
+   "label": "Published On",
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "public_photo",
+ "is_published_field": "publish_coach_profile",
+ "module": "Sports",
+ "name": "Coach Profile",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Manager"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Administrator"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Head Coach"
+  },
+  {
+   "read": 1,
+   "role": "Sports Viewer"
+  }
+ ],
+ "search_fields": "coach_name,employee,instructor,sport_specialties",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "coach_name",
+ "track_changes": 1
+}

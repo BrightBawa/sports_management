@@ -1,0 +1,102 @@
+{
+ "doctype": "Workspace",
+ "label": "Sports",
+ "module": "Sports",
+ "name": "Sports",
+ "title": "Sports",
+ "public": 1,
+ "icon": "goal",
+ "content": "[{\"id\":\"sports_header\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Sports</b></span>\",\"col\":12}},{\"id\":\"sports_settings\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sports Settings\",\"col\":3}},{\"id\":\"sports_sport\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sport\",\"col\":3}},{\"id\":\"sports_team\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sports Team\",\"col\":3}},{\"id\":\"sports_athlete\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Athlete Profile\",\"col\":3}},{\"id\":\"sports_coach\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Coach Profile\",\"col\":3}},{\"id\":\"sports_season\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sports Season\",\"col\":3}}]",
+ "links": [
+  {
+   "label": "Sports Settings",
+   "link_to": "Sports Settings",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Sport",
+   "link_to": "Sport",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Sports Team",
+   "link_to": "Sports Team",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Athlete Profile",
+   "link_to": "Athlete Profile",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Coach Profile",
+   "link_to": "Coach Profile",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Sports Season",
+   "link_to": "Sports Season",
+   "link_type": "DocType",
+   "type": "Link"
+  }
+ ],
+ "roles": [
+  {
+   "role": "Sports Manager"
+  },
+  {
+   "role": "Sports Administrator"
+  },
+  {
+   "role": "Head Coach"
+  },
+  {
+   "role": "Sports Viewer"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "shortcuts": [
+  {
+   "label": "Sports Settings",
+   "link_to": "Sports Settings",
+   "type": "DocType"
+  },
+  {
+   "label": "Sport",
+   "link_to": "Sport",
+   "type": "DocType"
+  },
+  {
+   "label": "Sports Team",
+   "link_to": "Sports Team",
+   "type": "DocType"
+  },
+  {
+   "label": "Athlete Profile",
+   "link_to": "Athlete Profile",
+   "type": "DocType"
+  },
+  {
+   "label": "Coach Profile",
+   "link_to": "Coach Profile",
+   "type": "DocType"
+  },
+  {
+   "label": "Sports Season",
+   "link_to": "Sports Season",
+   "type": "DocType"
+  }
+ ],
+ "charts": [],
+ "number_cards": [],
+ "quick_lists": [],
+ "custom_blocks": [],
+ "type": "Workspace"
+}
