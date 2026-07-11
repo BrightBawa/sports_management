@@ -1,0 +1,24 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% include "templates/includes/sports/styles.html" %}
+<section class="sports-site">
+  <div class="sports-hero">
+    <h1>{{ doc.coach_name }}</h1>
+    <p class="sports-meta">{{ doc.coaching_role or "" }}</p>
+    {% if doc.biography %}<div>{{ doc.biography }}</div>{% endif %}
+  </div>
+
+  {% if teams %}
+  <h3>Published Teams</h3>
+  <div class="sports-grid">
+    {% for team in teams %}
+    <article class="sports-card">
+      <h4><a href="/{{ team.route }}">{{ team.team_name }}</a></h4>
+      <p class="sports-meta">{{ team.season or "" }}</p>
+    </article>
+    {% endfor %}
+  </div>
+  {% endif %}
+</section>
+{% endblock %}

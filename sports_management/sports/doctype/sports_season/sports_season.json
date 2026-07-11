@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "season_name",
+  "academic_year",
+  "start_date",
+  "end_date",
+  "is_current"
+ ],
+ "fields": [
+  {
+   "fieldname": "season_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Season Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Academic Year",
+   "options": "Academic Year",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_current",
+   "fieldtype": "Check",
+   "label": "Current Season"
+  }
+ ],
+ "module": "Sports",
+ "name": "Sports Season",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Manager"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Sports Administrator"
+  },
+  {
+   "read": 1,
+   "role": "Sports Viewer"
+  }
+ ],
+ "search_fields": "season_name,academic_year",
+ "show_name_in_global_search": 1,
+ "sort_field": "start_date",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "season_name",
+ "track_changes": 1
+}

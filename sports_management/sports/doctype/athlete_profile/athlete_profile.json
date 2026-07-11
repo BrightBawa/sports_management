@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "student",
+  "public_name",
+  "student_group",
+  "program",
+  "campus",
+  "primary_sport",
+  "current_team",
+  "preferred_position",
+  "jersey_number",
+  "short_bio",
+  "achievements_summary",
+  "public_photo",
+  "slug",
+  "route",
+  "status",
+  "profile_visibility",
+  "publish_athlete_profile",
+  "profile_status",
+  "published_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "student",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Student",
+   "options": "Student",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "public_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Public Name"
+  },
+  {
+   "fieldname": "student_group",
+   "fieldtype": "Link",
+   "label": "Student Group",
+   "options": "Student Group"
+  },
+  {
+   "fieldname": "program",
+   "fieldtype": "Link",
+   "label": "Program",
+   "options": "Program"
+  },
+  {
+   "fieldname": "campus",
+   "fieldtype": "Data",
+   "label": "Campus"
+  },
+  {
+   "fieldname": "primary_sport",
+   "fieldtype": "Link",
+   "label": "Primary Sport",
+   "options": "Sport"
+  },
+  {
+   "fieldname": "current_team",
+   "fieldtype": "Link",
+   "label": "Current Team",
+   "options": "Sports Team"
+  },
+  {
+   "fieldname": "preferred_position",
+   "fieldtype": "Data",
+   "label": "Preferred Position"
+  },
+  {
+   "fieldname": "jersey_number",
+   "fieldtype": "Data",
+   "label": "Jersey Number"
+  },
+  {
+   "fieldname": "short_bio",
+   "fieldtype": "Text Editor",
+   "label": "Short Bio"
+  },
+  {
+   "fieldname": "achievements_summary",
+   "fieldtype": "Small Text",
+   "label": "Achievements Summary"
+  },
+  {
+   "fieldname": "public_photo",
+   "fieldtype": "Attach Image",
+   "label": "Public Photo"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Slug",
+   "unique": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "Active",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nInactive\nAlumni"
+  },
+  {
+   "default": "Internal Only",
+   "fieldname": "profile_visibility",
+   "fieldtype": "Select",
+   "label": "Profile Visibility",
+   "options": "\nInternal Only\nLogged-in School Community\nPublic Summary\nFully Published"
+  },
+  {
+   "default": "0",
+   "fieldname": "publish_athlete_profile",
+   "fieldtype": "Check",
+   "label": "Publish Athlete Profile"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "profile_status",
+   "fieldtype": "Select",
+   "label": "Profile Status",
+   "options": "\nDraft\nPublished\nUnpublished"
+  },
+  {
+   "fieldname": "published_on",
+   "fieldtype": "Datetime",
+   "label": "Published On",
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "public_photo",
+ "is_published_field": "publish_athlete_profile",
+ "module": "Sports",
+ "name": "Athlete Profile",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Manager"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Administrator"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Head Coach"
+  },
+  {
+   "read": 1,
+   "role": "Sports Viewer"
+  }
+ ],
+ "search_fields": "student,public_name,primary_sport,current_team",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "public_name",
+ "track_changes": 1
+}

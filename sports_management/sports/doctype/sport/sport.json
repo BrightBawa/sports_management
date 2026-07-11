@@ -1,0 +1,154 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "sport_name",
+  "sport_code",
+  "category",
+  "participation_type",
+  "gender_category",
+  "is_indoor",
+  "governing_body",
+  "description",
+  "cover_image",
+  "slug",
+  "route",
+  "is_active",
+  "show_on_website",
+  "published_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "sport_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sport Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sport_code",
+   "fieldtype": "Data",
+   "label": "Sport Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nBall Sport\nRacquet Sport\nAthletics\nAquatics\nCombat Sport\nOther"
+  },
+  {
+   "fieldname": "participation_type",
+   "fieldtype": "Select",
+   "label": "Participation Type",
+   "options": "\nTeam\nIndividual\nHybrid"
+  },
+  {
+   "fieldname": "gender_category",
+   "fieldtype": "Select",
+   "label": "Gender Category",
+   "options": "\nAny\nBoys\nGirls\nMixed"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_indoor",
+   "fieldtype": "Check",
+   "label": "Indoor Sport"
+  },
+  {
+   "fieldname": "governing_body",
+   "fieldtype": "Data",
+   "label": "Governing Body"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "cover_image",
+   "fieldtype": "Attach Image",
+   "label": "Cover Image"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Slug",
+   "unique": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Route",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "Active"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_on_website",
+   "fieldtype": "Check",
+   "label": "Publish on Website"
+  },
+  {
+   "fieldname": "published_on",
+   "fieldtype": "Datetime",
+   "label": "Published On",
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "cover_image",
+ "is_published_field": "show_on_website",
+ "module": "Sports",
+ "name": "Sport",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Manager"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Administrator"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Sports Content Editor"
+  },
+  {
+   "read": 1,
+   "role": "Sports Viewer"
+  }
+ ],
+ "search_fields": "sport_name,sport_code,category",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "sport_name",
+ "track_changes": 1
+}

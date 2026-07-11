@@ -1,0 +1,25 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% include "templates/includes/sports/styles.html" %}
+<section class="sports-site">
+  <div class="sports-hero">
+    <h1>Sports</h1>
+    <p>Published sports, teams, athlete profiles, and coaching profiles.</p>
+  </div>
+
+  {% if sports %}
+  <div class="sports-grid">
+    {% for sport in sports %}
+    <article class="sports-card">
+      <h3><a href="/{{ sport.route }}">{{ sport.sport_name }}</a></h3>
+      <p class="sports-meta">{{ sport.category or "" }}</p>
+      {% if sport.description %}<p>{{ sport.description | striptags | truncate(180) }}</p>{% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p>No sports are published yet.</p>
+  {% endif %}
+</section>
+{% endblock %}

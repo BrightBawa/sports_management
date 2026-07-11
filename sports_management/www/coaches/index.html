@@ -1,0 +1,18 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+{% include "templates/includes/sports/styles.html" %}
+<section class="sports-site">
+  <div class="sports-hero">
+    <h1>Coaches</h1>
+  </div>
+  <div class="sports-grid">
+    {% for coach in coaches %}
+    <article class="sports-card">
+      <h3><a href="/{{ coach.route }}">{{ coach.coach_name }}</a></h3>
+      <p class="sports-meta">{{ coach.coaching_role or "" }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

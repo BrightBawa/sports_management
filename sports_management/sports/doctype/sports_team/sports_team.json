@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "allow_guest_to_view": 1,
+ "allow_import": 1,
+ "allow_rename": 1,
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "team_name",
+  "sport",
+  "academic_year",
+  "season",
+  "campus",
+  "age_group",
+  "gender_category",
+  "team_level",
+  "head_coach",
+  "team_captain",
+  "training_venue",
+  "training_schedule",
+  "team_photo",
+  "description",
+  "slug",
+  "route",
+  "status",
+  "show_on_website",
+  "profile_status",
+  "published_on"
+ ],
+ "fields": [
+  {
+   "fieldname": "team_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Team Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sport",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Sport",
+   "options": "Sport",
+   "reqd": 1
+  },
+  {
+   "fieldname": "academic_year",
+   "fieldtype": "Link",
+   "label": "Academic Year",
+   "options": "Academic Year"
+  },
+  {
+   "fieldname": "season",
+   "fieldtype": "Link",
+   "label": "Season",
+   "options": "Sports Season"
+  },
+  {
+   "fieldname": "campus",
+   "fieldtype": "Data",
+   "label": "Campus"
+  },
+  {
+   "fieldname": "age_group",
+   "fieldtype": "Data",
+   "label": "Age Group"
+  },
+  {
+   "fieldname": "gender_category",
+   "fieldtype": "Select",
+   "label": "Gender Category",
+   "options": "\nBoys\nGirls\nMixed"
+  },
+  {
+   "fieldname": "team_level",
+   "fieldtype": "Select",
+   "label": "Team Level",
+   "options": "\nDevelopment\nJunior\nSenior\nElite"
+  },
+  {
+   "fieldname": "head_coach",
+   "fieldtype": "Link",
+   "label": "Head Coach",
+   "options": "Coach Profile"
+  },
+  {
+   "fieldname": "team_captain",
+   "fieldtype": "Link",
+   "label": "Team Captain",
+   "options": "Athlete Profile"
+  },
+  {
+   "fieldname": "training_venue",
+   "fieldtype": "Data",
+   "label": "Training Venue"
+  },
+  {
+   "fieldname": "training_schedule",
+   "fieldtype": "Small Text",
+   "label": "Training Schedule"
+  },
+  {
+   "fieldname": "team_photo",
+   "fieldtype": "Attach Image",
+   "label": "Team Photo"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "slug",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Slug",
+   "unique": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "default": "Draft",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nActive\nArchived"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_on_website",
+   "fieldtype": "Check",
+   "label": "Publish on Website"
+  },
+  {
+   "default": "Draft",
+   "fieldname": "profile_status",
+   "fieldtype": "Select",
+   "label": "Profile Status",
+   "options": "\nDraft\nPublished\nUnpublished"
+  },
+  {
+   "fieldname": "published_on",
+   "fieldtype": "Datetime",
+   "label": "Published On",
+   "read_only": 1
+  }
+ ],
+ "has_web_view": 1,
+ "image_field": "team_photo",
+ "is_published_field": "show_on_website",
+ "module": "Sports",
+ "name": "Sports Team",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "System Manager"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Manager"
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Sports Administrator"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Head Coach"
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Team Manager"
+  },
+  {
+   "read": 1,
+   "role": "Sports Viewer"
+  }
+ ],
+ "search_fields": "team_name,sport,season,campus",
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "team_name",
+ "track_changes": 1
+}
