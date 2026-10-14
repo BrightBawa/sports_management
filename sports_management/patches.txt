@@ -4,3 +4,5 @@
 
 [post_model_sync]
 # Patches added in this section will be executed after doctypes are migrated
+sports_management.patches.publish_coach_photos
+sports_management.patches.initialize_public_profile_options

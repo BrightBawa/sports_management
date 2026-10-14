@@ -1,21 +1,21 @@
-{% extends "templates/web.html" %}
+{% extends "templates/sports_web.html" %}
 
 {% block page_content %}
 {% include "templates/includes/sports/styles.html" %}
 <section class="sports-site">
   <div class="sports-hero">
-    <h1>{{ doc.sport_name }}</h1>
-    <p class="sports-meta">{{ doc.category }}{% if doc.gender_category %} · {{ doc.gender_category }}{% endif %}</p>
-    {% if doc.description %}<div>{{ doc.description }}</div>{% endif %}
+    <h1>{{ doc.sport_name |e }}</h1>
+    <p class="sports-meta">{{ (doc.category or "") |e }}{% if doc.gender_category %} · {{ doc.gender_category |e }}{% endif %}</p>
+    {% if doc.description %}<div class="sports-profile-bio">{{ doc.description }}</div>{% endif %}
   </div>
 
   {% if teams %}
   <div class="sports-grid">
     {% for team in teams %}
     <article class="sports-card">
-      <h3><a href="/{{ team.route }}">{{ team.team_name }}</a></h3>
-      <p class="sports-meta">{{ team.season or "" }}{% if team.age_group %} · {{ team.age_group }}{% endif %}</p>
-      {% if team.gender_category %}<p>{{ team.gender_category }}</p>{% endif %}
+      <h3><a href="/{{ team.route |e }}">{{ team.team_name |e }}</a></h3>
+      <p class="sports-meta">{{ (team.season or "") |e }}{% if team.show_age_group and team.age_group %} · {{ team.age_group |e }}{% endif %}</p>
+      {% if team.show_gender_category and team.gender_category %}<p>{{ team.gender_category |e }}</p>{% endif %}
     </article>
     {% endfor %}
   </div>

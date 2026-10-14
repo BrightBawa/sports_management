@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "creation": "2026-07-11 21:51:44.254814",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -28,8 +29,9 @@
   },
   {
    "fieldname": "default_campus",
-   "fieldtype": "Data",
-   "label": "Default Campus"
+   "fieldtype": "Link",
+   "label": "Default Campus",
+   "options": "Branch"
   },
   {
    "default": "athletes",
@@ -68,30 +70,35 @@
   }
  ],
  "issingle": 1,
+ "links": [],
+ "modified": "2026-08-25 09:15:44.446316",
+ "modified_by": "Administrator",
  "module": "Sports",
  "name": "Sports Settings",
+ "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "System Manager"
+   "role": "System Manager",
+   "write": 1
   },
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "Sports Manager"
+   "role": "Sports Manager",
+   "write": 1
   },
   {
    "read": 1,
-   "write": 1,
-   "role": "Sports Administrator"
+   "role": "Sports Administrator",
+   "write": 1
   }
  ],
  "quick_entry": 1,
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

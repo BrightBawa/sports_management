@@ -3,6 +3,7 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
+ "creation": "2026-07-11 21:51:43.863212",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
@@ -13,7 +14,20 @@
   "public_photo",
   "coaching_role",
   "sport_specialties",
+  "qualifications",
+  "experience",
   "biography",
+  "optional_details_section",
+  "coaching_philosophy",
+  "achievements_summary",
+  "languages",
+  "website_display_section",
+  "show_qualifications",
+  "show_experience",
+  "show_coaching_philosophy",
+  "show_achievements_summary",
+  "show_languages",
+  "publication_settings_section",
   "contact_visibility",
   "slug",
   "route",
@@ -43,15 +57,18 @@
    "options": "Instructor"
   },
   {
+   "fetch_from": "employee.employee_name",
    "fieldname": "coach_name",
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Coach Name"
   },
   {
+   "description": "Displayed on the public coach profile. Upload a public image so visitors can see it without signing in.",
    "fieldname": "public_photo",
    "fieldtype": "Attach Image",
-   "label": "Public Photo"
+   "label": "Public Photo",
+   "make_attachment_public": 1
   },
   {
    "fieldname": "coaching_role",
@@ -64,6 +81,19 @@
    "label": "Sport Specialties"
   },
   {
+   "description": "List relevant professional qualifications or certifications, one per line.",
+   "fieldname": "qualifications",
+   "fieldtype": "Small Text",
+   "label": "Professional Qualifications"
+  },
+  {
+   "description": "Summarize relevant coaching and teaching experience for the public profile.",
+   "fieldname": "experience",
+   "fieldtype": "Small Text",
+   "label": "Coaching Experience"
+  },
+  {
+   "description": "Use headings, paragraphs, and lists for the biography. The website template supplies the shared profile layout.",
    "fieldname": "biography",
    "fieldtype": "Text Editor",
    "label": "Biography"
@@ -114,44 +144,112 @@
    "fieldtype": "Datetime",
    "label": "Published On",
    "read_only": 1
+  },
+  {
+   "fieldname": "optional_details_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Profile Details",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "coaching_philosophy",
+   "fieldtype": "Small Text",
+   "label": "Coaching Philosophy"
+  },
+  {
+   "fieldname": "achievements_summary",
+   "fieldtype": "Small Text",
+   "label": "Coaching Achievements"
+  },
+  {
+   "fieldname": "languages",
+   "fieldtype": "Data",
+   "label": "Languages"
+  },
+  {
+   "fieldname": "website_display_section",
+   "fieldtype": "Section Break",
+   "label": "Website Display Options",
+   "description": "Tick the details to display on this published profile. Unticked details and empty fields are omitted from the website.",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "show_qualifications",
+   "fieldtype": "Check",
+   "label": "Show Qualifications on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_experience",
+   "fieldtype": "Check",
+   "label": "Show Coaching Experience on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_coaching_philosophy",
+   "fieldtype": "Check",
+   "label": "Show Coaching Philosophy on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_achievements_summary",
+   "fieldtype": "Check",
+   "label": "Show Coaching Achievements on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_languages",
+   "fieldtype": "Check",
+   "label": "Show Languages on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "publication_settings_section",
+   "fieldtype": "Section Break",
+   "label": "Publication"
   }
  ],
  "has_web_view": 1,
  "image_field": "public_photo",
  "is_published_field": "publish_coach_profile",
+ "links": [],
+ "modified": "2026-08-25 10:08:26.392576",
+ "modified_by": "Administrator",
  "module": "Sports",
  "name": "Coach Profile",
+ "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "System Manager"
+   "role": "System Manager",
+   "write": 1
   },
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "Sports Manager"
+   "role": "Sports Manager",
+   "write": 1
   },
   {
    "create": 1,
    "read": 1,
-   "write": 1,
-   "role": "Sports Administrator"
+   "role": "Sports Administrator",
+   "write": 1
   },
   {
    "read": 1,
-   "write": 1,
-   "role": "Head Coach"
+   "role": "Head Coach",
+   "write": 1
   },
   {
    "read": 1,
    "role": "Sports Viewer"
   }
  ],
+ "row_format": "Dynamic",
  "search_fields": "coach_name,employee,instructor,sport_specialties",
  "show_name_in_global_search": 1,
  "sort_field": "modified",

@@ -1,0 +1,12 @@
+{% extends "templates/web.html" %}
+
+{% block style %}
+{{ super() }}
+{{ include_style("/assets/sports_management/css/sports_public.css?v=20261014-2") }}
+{% endblock %}
+
+{% block content %}
+<div class="sports-page-content">
+  {{ super() }}
+</div>
+{% endblock %}

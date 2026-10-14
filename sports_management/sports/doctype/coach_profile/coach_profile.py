@@ -1,3 +1,5 @@
+from urllib.parse import unquote, urlsplit
+
 import frappe
 from frappe import _
 
@@ -11,6 +13,7 @@ from sports_management.utils.document_helpers import (
     validate_publication_state,
     validate_required_fields_for_publication,
 )
+from sports_management.utils.public_profiles import get_public_details
 from sports_management.website_context import PublicWebsiteGenerator
 
 
@@ -40,6 +43,17 @@ class CoachProfile(PublicWebsiteGenerator):
             required_fields=("route", "public_photo"),
             require_one_of=("biography", "sport_specialties"),
         )
+        self.validate_public_photo()
+
+    def validate_public_photo(self):
+        if not self.is_website_published() or not self.public_photo:
+            return
+
+        photo_path = unquote(urlsplit(self.public_photo).path)
+        if photo_path.startswith("/private/"):
+            frappe.throw(
+                _("Public Photo must be accessible to website visitors. Upload a public image before publishing.")
+            )
 
     def get_coach_name(self) -> str:
         return (
@@ -57,9 +71,15 @@ class CoachProfile(PublicWebsiteGenerator):
         context.no_cache = 1
         context.title = self.coach_name
         context.parents = [{"name": "Coaches", "route": "/coaches"}]
+        context.public_details = get_public_details(self)
         context.teams = frappe.get_all(
             "Sports Team",
-            filters={"head_coach": self.name, "show_on_website": 1, "profile_status": "Published"},
+            filters={
+                "head_coach": self.name,
+                "show_on_website": 1,
+                "profile_status": "Published",
+                "show_head_coach": 1,
+            },
             fields=["team_name", "route", "season"],
             order_by="team_name asc",
         )

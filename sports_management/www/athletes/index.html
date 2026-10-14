@@ -1,4 +1,4 @@
-{% extends "templates/web.html" %}
+{% extends "templates/sports_web.html" %}
 
 {% block page_content %}
 {% include "templates/includes/sports/styles.html" %}
@@ -9,8 +9,8 @@
   <div class="sports-grid">
     {% for athlete in athletes %}
     <article class="sports-card">
-      <h3><a href="/{{ athlete.route }}">{{ athlete.public_name }}</a></h3>
-      <p class="sports-meta">{{ athlete.primary_sport or "" }}{% if athlete.current_team %} · {{ athlete.current_team }}{% endif %}</p>
+      <h3><a href="/{{ athlete.route |e }}">{{ athlete.public_name |e }}</a></h3>
+      <p class="sports-meta">{{ (athlete.primary_sport or "") |e }}{% if athlete.show_current_team and athlete.current_team %} · {{ athlete.current_team |e }}{% endif %}</p>
     </article>
     {% endfor %}
   </div>

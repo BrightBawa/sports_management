@@ -9,6 +9,12 @@ from sports_management.utils.document_helpers import (
     validate_publication_state,
     validate_required_fields_for_publication,
 )
+from sports_management.utils.public_profiles import (
+    get_public_details,
+    get_public_image_url,
+    get_published_profile,
+    validate_optional_public_photo,
+)
 from sports_management.website_context import PublicWebsiteGenerator
 
 
@@ -37,14 +43,17 @@ class AthleteProfile(PublicWebsiteGenerator):
             required_fields=("route", "public_photo"),
             require_one_of=("short_bio",),
         )
+        validate_optional_public_photo(self, "public_photo")
 
     def get_context(self, context):
         context.no_cache = 1
         context.title = self.public_name
         context.parents = [{"name": "Athletes", "route": "/athletes"}]
+        context.public_details = get_public_details(self)
+        context.profile_photo = get_public_image_url(self.public_photo) if self.get("show_public_photo") else None
         context.team_row = None
-        if self.current_team:
-            context.team_row = frappe.db.get_value(
-                "Sports Team", self.current_team, ["team_name", "route"], as_dict=True
+        if self.current_team and self.get("show_current_team"):
+            context.team_row = get_published_profile(
+                "Sports Team", self.current_team, ["team_name", "route"]
             )
         return context

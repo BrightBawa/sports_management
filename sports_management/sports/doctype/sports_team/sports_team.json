@@ -3,29 +3,49 @@
  "allow_guest_to_view": 1,
  "allow_import": 1,
  "allow_rename": 1,
+ "creation": "2026-07-11 21:51:43.481968",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "team_name",
-  "sport",
   "academic_year",
-  "season",
-  "campus",
-  "age_group",
-  "gender_category",
-  "team_level",
+  "team_name",
   "head_coach",
   "team_captain",
+  "campus",
+  "team_level",
   "training_venue",
+  "profile_status",
   "training_schedule",
   "team_photo",
-  "description",
+  "column_break_kpoy",
+  "season",
+  "sport",
+  "gender_category",
+  "age_group",
   "slug",
-  "route",
-  "status",
+  "description",
+  "optional_details_section",
+  "team_motto",
+  "achievements_summary",
+  "website_display_section",
+  "show_team_photo",
+  "show_team_motto",
+  "show_achievements_summary",
+  "show_team_level",
+  "show_age_group",
+  "show_gender_category",
+  "show_campus",
+  "show_head_coach",
+  "show_team_captain",
+  "show_training_venue",
+  "show_training_schedule",
+  "show_athletes",
+  "section_break_grrj",
   "show_on_website",
-  "profile_status",
-  "published_on"
+  "published_on",
+  "column_break_kcce",
+  "route",
+  "status"
  ],
  "fields": [
   {
@@ -68,6 +88,7 @@
   {
    "fieldname": "gender_category",
    "fieldtype": "Select",
+   "in_list_view": 1,
    "label": "Gender Category",
    "options": "\nBoys\nGirls\nMixed"
   },
@@ -102,7 +123,9 @@
   {
    "fieldname": "team_photo",
    "fieldtype": "Attach Image",
-   "label": "Team Photo"
+   "label": "Team Photo",
+   "make_attachment_public": 1,
+   "description": "Use a public image and tick the photo option under Website Display Options to show it on the published profile."
   },
   {
    "fieldname": "description",
@@ -148,49 +171,161 @@
    "fieldtype": "Datetime",
    "label": "Published On",
    "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kpoy",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_grrj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_kcce",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "optional_details_section",
+   "fieldtype": "Section Break",
+   "label": "Additional Profile Details",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "team_motto",
+   "fieldtype": "Data",
+   "label": "Team Motto"
+  },
+  {
+   "fieldname": "achievements_summary",
+   "fieldtype": "Small Text",
+   "label": "Team Achievements"
+  },
+  {
+   "fieldname": "website_display_section",
+   "fieldtype": "Section Break",
+   "label": "Website Display Options",
+   "description": "Tick the details to display on this published profile. Unticked details and empty fields are omitted from the website.",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "show_team_photo",
+   "fieldtype": "Check",
+   "label": "Show Team Photo on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_team_motto",
+   "fieldtype": "Check",
+   "label": "Show Team Motto on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_achievements_summary",
+   "fieldtype": "Check",
+   "label": "Show Team Achievements on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_team_level",
+   "fieldtype": "Check",
+   "label": "Show Team Level on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_age_group",
+   "fieldtype": "Check",
+   "label": "Show Age Group on Website",
+   "default": "1"
+  },
+  {
+   "fieldname": "show_gender_category",
+   "fieldtype": "Check",
+   "label": "Show Gender Category on Website",
+   "default": "1"
+  },
+  {
+   "fieldname": "show_campus",
+   "fieldtype": "Check",
+   "label": "Show Campus on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_head_coach",
+   "fieldtype": "Check",
+   "label": "Show Head Coach on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_team_captain",
+   "fieldtype": "Check",
+   "label": "Show Team Captain on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_training_venue",
+   "fieldtype": "Check",
+   "label": "Show Training Venue on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_training_schedule",
+   "fieldtype": "Check",
+   "label": "Show Training Schedule on Website",
+   "default": "0"
+  },
+  {
+   "fieldname": "show_athletes",
+   "fieldtype": "Check",
+   "label": "Show Athlete Roster on Website",
+   "default": "1"
   }
  ],
  "has_web_view": 1,
  "image_field": "team_photo",
  "is_published_field": "show_on_website",
+ "links": [],
+ "modified": "2026-08-25 09:58:01.277576",
+ "modified_by": "Administrator",
  "module": "Sports",
  "name": "Sports Team",
+ "owner": "Administrator",
  "permissions": [
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "System Manager"
+   "role": "System Manager",
+   "write": 1
   },
   {
    "create": 1,
    "delete": 1,
    "read": 1,
-   "write": 1,
-   "role": "Sports Manager"
+   "role": "Sports Manager",
+   "write": 1
   },
   {
    "create": 1,
    "read": 1,
-   "write": 1,
-   "role": "Sports Administrator"
+   "role": "Sports Administrator",
+   "write": 1
   },
   {
    "read": 1,
-   "write": 1,
-   "role": "Head Coach"
+   "role": "Head Coach",
+   "write": 1
   },
   {
    "read": 1,
-   "write": 1,
-   "role": "Team Manager"
+   "role": "Team Manager",
+   "write": 1
   },
   {
    "read": 1,
    "role": "Sports Viewer"
   }
  ],
+ "row_format": "Dynamic",
  "search_fields": "team_name,sport,season,campus",
  "show_name_in_global_search": 1,
  "sort_field": "modified",

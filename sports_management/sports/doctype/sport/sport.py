@@ -48,7 +48,7 @@ class Sport(PublicWebsiteGenerator):
         context.teams = frappe.get_all(
             "Sports Team",
             filters={"sport": self.name, "show_on_website": 1, "profile_status": "Published"},
-            fields=["team_name", "route", "season", "age_group", "gender_category"],
+            fields=["team_name", "route", "season", "age_group", "gender_category", "show_age_group", "show_gender_category"],
             order_by="team_name asc",
         )
         return context

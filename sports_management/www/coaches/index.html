@@ -1,18 +1,41 @@
-{% extends "templates/web.html" %}
+{% extends "templates/sports_web.html" %}
+
+{% block style %}
+{{ super() }}
+{{ include_style("/assets/sports_management/css/coach_profiles.css?v=20261014") }}
+{% endblock %}
 
 {% block page_content %}
-{% include "templates/includes/sports/styles.html" %}
-<section class="sports-site">
-  <div class="sports-hero">
-    <h1>Coaches</h1>
-  </div>
-  <div class="sports-grid">
+<section class="coach-site coach-directory" aria-labelledby="coaches-title">
+  <header class="coach-directory-header">
+    <p class="coach-eyebrow">{{ _("GCIHS Athletics") }}</p>
+    <h1 id="coaches-title">{{ _("Meet our coaches") }}</h1>
+    <p>{{ _("The people guiding our student athletes in sport, teamwork, and character.") }}</p>
+  </header>
+  {% if coaches %}
+  <div class="coach-directory-grid">
     {% for coach in coaches %}
-    <article class="sports-card">
-      <h3><a href="/{{ coach.route }}">{{ coach.coach_name }}</a></h3>
-      <p class="sports-meta">{{ coach.coaching_role or "" }}</p>
+    <article class="coach-card">
+      <a class="coach-card-link" href="/{{ coach.route |e }}">
+        <div class="coach-portrait">
+          {% if coach.public_photo and not coach.public_photo.startswith('/private/') %}
+          <img src="{{ coach.public_photo |e }}" alt="" loading="lazy" decoding="async">
+          {% else %}
+          <div class="coach-photo-placeholder" aria-hidden="true">{{ (coach.coach_name or "C")[:1] |e }}</div>
+          {% endif %}
+        </div>
+        <div class="coach-card-details">
+          <h2>{{ coach.coach_name |e }}</h2>
+          {% if coach.coaching_role %}<p class="coach-role">{{ coach.coaching_role |e }}</p>{% endif %}
+          {% if coach.sport_specialties %}<p class="coach-card-specialties">{{ coach.sport_specialties |e }}</p>{% endif %}
+          <span class="coach-card-action" aria-hidden="true">{{ _("View profile") }} &rarr;</span>
+        </div>
+      </a>
     </article>
     {% endfor %}
   </div>
+  {% else %}
+  <p class="coach-empty">{{ _("Coach profiles will be available here soon.") }}</p>
+  {% endif %}
 </section>
 {% endblock %}

@@ -1,21 +1,26 @@
-{% extends "templates/web.html" %}
+{% extends "templates/sports_web.html" %}
 
 {% block page_content %}
 {% include "templates/includes/sports/styles.html" %}
 <section class="sports-site">
-  <div class="sports-hero">
-    <h1>{{ doc.team_name }}</h1>
-    <p class="sports-meta">{{ doc.season or "" }}{% if sport_row %} · <a href="/{{ sport_row.route }}">{{ sport_row.sport_name }}</a>{% endif %}</p>
-    {% if doc.description %}<div>{{ doc.description }}</div>{% endif %}
+  <div class="sports-hero{% if profile_photo %} sports-profile-hero{% endif %}">
+    {% if profile_photo %}<img class="sports-profile-photo" src="{{ profile_photo |e }}" alt="{{ doc.team_name |e }}" decoding="async">{% endif %}
+    <div>
+      <h1>{{ doc.team_name |e }}</h1>
+      <p class="sports-meta">{{ (doc.season or "") |e }}{% if sport_row %} · <a href="/{{ sport_row.route |e }}">{{ sport_row.sport_name |e }}</a>{% endif %}</p>
+      {% if doc.description %}<div class="sports-profile-bio">{{ doc.description }}</div>{% endif %}
+    </div>
   </div>
+
+  {% include "templates/includes/sports/public_details.html" %}
 
   {% if athletes %}
   <h3>Current Athletes</h3>
   <div class="sports-grid">
     {% for athlete in athletes %}
     <article class="sports-card">
-      <h4><a href="/{{ athlete.route }}">{{ athlete.public_name }}</a></h4>
-      <p class="sports-meta">{{ athlete.preferred_position or "" }}{% if athlete.jersey_number %} · #{{ athlete.jersey_number }}{% endif %}</p>
+      <h4><a href="/{{ athlete.route |e }}">{{ athlete.public_name |e }}</a></h4>
+      <p class="sports-meta">{% if athlete.show_preferred_position %}{{ (athlete.preferred_position or "") |e }}{% endif %}{% if athlete.show_jersey_number and athlete.jersey_number %}{% if athlete.show_preferred_position and athlete.preferred_position %} · {% endif %}#{{ athlete.jersey_number |e }}{% endif %}</p>
     </article>
     {% endfor %}
   </div>

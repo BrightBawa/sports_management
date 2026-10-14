@@ -1,13 +1,17 @@
-{% extends "templates/web.html" %}
+{% extends "templates/sports_web.html" %}
 
 {% block page_content %}
 {% include "templates/includes/sports/styles.html" %}
 <section class="sports-site">
-  <div class="sports-hero">
-    <h1>{{ doc.public_name }}</h1>
-    <p class="sports-meta">{{ doc.primary_sport or "" }}{% if doc.preferred_position %} · {{ doc.preferred_position }}{% endif %}</p>
-    {% if team_row %}<p><a href="/{{ team_row.route }}">{{ team_row.team_name }}</a></p>{% endif %}
-    {% if doc.short_bio %}<div>{{ doc.short_bio }}</div>{% endif %}
+  <div class="sports-hero{% if profile_photo %} sports-profile-hero{% endif %}">
+    {% if profile_photo %}<img class="sports-profile-photo" src="{{ profile_photo |e }}" alt="{{ doc.public_name |e }}" decoding="async">{% endif %}
+    <div>
+      <h1>{{ doc.public_name |e }}</h1>
+      <p class="sports-meta">{{ (doc.primary_sport or "") |e }}{% if doc.get('show_preferred_position') and doc.preferred_position %} · {{ doc.preferred_position |e }}{% endif %}</p>
+      {% if team_row %}<p><a href="/{{ team_row.route |e }}">{{ team_row.team_name |e }}</a></p>{% endif %}
+      {% if doc.short_bio %}<div class="sports-profile-bio">{{ doc.short_bio }}</div>{% endif %}
+    </div>
   </div>
+  {% include "templates/includes/sports/public_details.html" %}
 </section>
 {% endblock %}
